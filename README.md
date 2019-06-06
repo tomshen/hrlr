@@ -50,7 +50,6 @@ Development
 -----------
 
 1. Download and install [Docker](https://download.docker.com/mac/stable/Docker.dmg).
-1. `docker pull wordpress`
 1. `docker swarm init`
 1. `docker stack deploy -c stack.yml wordpress`
 1. Open [localhost:8080](http://localhost:8080) in a browser.
