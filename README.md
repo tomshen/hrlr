@@ -45,3 +45,12 @@ Then, update the stylesheet header in `style.css`, the links in `footer.php` wit
 Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
 
 Good luck!
+
+Development
+-----------
+
+1. Download and install [Docker](https://download.docker.com/mac/stable/Docker.dmg).
+1. `docker pull wordpress`
+1. `docker swarm init`
+1. `docker stack deploy -c stack.yml wordpress`
+1. Open `http://localhost:8080`.
