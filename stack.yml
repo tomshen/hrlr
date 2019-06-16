@@ -13,7 +13,7 @@ services:
       WORDPRESS_DB_NAME: exampledb
     volumes:
       - ./site:/var/www/html
-      - ./hrlr:/var/www/html/wp-content/themes/hrlr:rwx
+      - ./hrlr:/var/www/html/wp-content/themes/hrlr
   
   db:
     image: mysql:5.7
@@ -30,6 +30,9 @@ services:
       - db
       - wordpress
     image: wordpress:cli
+    deploy:
+      restart_policy:
+        condition: none
     user: xfs
     command: >
       /bin/sh -c '
