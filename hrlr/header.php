@@ -47,15 +47,13 @@
 			<div class="site-branding">
 				<?php
 				the_custom_logo();
-				if ( is_front_page() && is_home() ) :
-					?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php
-				else :
-					?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php
-				endif;
+				?>
+				<a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<span>Columbia</span>
+					<span>Human Rights</span>
+					<span>Law Review</span>
+				</a>
+				<?php
 				$hrlr_description = get_bloginfo( 'description', 'display' );
 				if ( $hrlr_description || is_customize_preview() ) :
 					?>

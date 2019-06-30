@@ -334,7 +334,7 @@ template {
 html,
 body {
   color: #02011b;
-  font-family: serif;
+  font-family: Times, serif;
 }
 
 /* Text meant only for screen readers. */
@@ -391,18 +391,26 @@ body {
   flex-direction: column;
   font-family: sans-serif;
   position: fixed;
+  z-index: 10;
 }
 .main-navigation a {
   color: #02011b;
   text-decoration: none;
 }
 .main-navigation .menu-toggle {
+  background: none;
+  border: none;
   cursor: pointer;
-  text-align: left;
-  width: 32px;
+  font-size: 36px;
+  margin: 10px;
+  text-align: center;
+  width: 100%;
 }
 .main-navigation .menu-toggle:before {
   content: "☰";
+}
+.main-navigation .menu-toggle:hover {
+  background-color: #e8f0fb;
 }
 .main-navigation #main-navigation-menu {
   display: none;
@@ -438,7 +446,7 @@ body {
   width: 300px;
 }
 .main-navigation.toggled .menu-toggle {
-  margin-bottom: 10px;
+  width: 42px;
 }
 .main-navigation.toggled .menu-toggle:before {
   content: "✕";
@@ -447,13 +455,13 @@ body {
   display: flex;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 800px) {
   .main-navigation {
     background: white;
     flex: 1 0 300px;
     height: 800px;
     position: relative;
-    width: 300px;
+    max-width: 300px;
   }
   .main-navigation .menu-toggle {
     display: none;
@@ -474,11 +482,34 @@ body {
 .site {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.site-title {
+  color: #02011b;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1.1px;
+  line-height: 0.8;
+  max-width: 300px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .body {
   flex: 1 1 auto;
-  max-width: 100%;
+  max-width: calc(100% - 40px);
+  padding: 20px;
+}
+
+@media screen and (min-width: 800px) {
+  .body {
+    max-width: 800px;
+    width: calc(100% - 300px - 40px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
