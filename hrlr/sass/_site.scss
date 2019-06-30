@@ -1,0 +1,13 @@
+body {
+    background: $color-background;
+}
+
+.site {
+    display: flex;
+    flex-direction: row-reverse
+}
+
+.body {
+    flex: 1 1 auto;
+    max-width: 100%;
+}

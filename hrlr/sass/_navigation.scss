@@ -1,0 +1,99 @@
+$main-navigation-width: 300px;
+$main-navigation-height: 800px;
+
+.main-navigation {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    position: fixed;
+
+    a {
+        color: $color-text;
+        text-decoration: none;
+    }
+
+    .menu-toggle {
+        cursor: pointer;
+        text-align: left;
+        width: 32px;
+
+        &:before {
+            content: '☰';
+        }
+    }
+
+    #main-navigation-menu {
+        display: none;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+        padding: 10px;
+
+        > :last-child ul.menu {
+            font-size: 24px;
+        }
+    }
+    
+    ul.menu {
+        display: flex;
+        flex-direction: column;
+        font-size: 28px;
+        margin: 0;
+        padding: 0;
+
+        > li.menu-item {
+            display: block;
+            padding: 7px;
+            padding-left: calc(7px + 1em);
+            text-indent: -1em;
+
+            &:hover {
+                background-color: $color-nav-highlight;
+            }
+        }
+    }
+
+    &.toggled {
+        background: white;
+        height: 100vh;
+        max-width: 80%;
+        overflow-y: auto;
+        width: $main-navigation-width;
+
+        .menu-toggle {
+            margin-bottom: 10px;
+
+            &:before {
+                content: '✕';
+            }
+        }
+
+        #main-navigation-menu {
+            display: flex;
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-width-mobile) {
+    .main-navigation {
+        background: white;
+        flex: 1 0 $main-navigation-width;
+        height: $main-navigation-height;
+        position: relative;
+        width: $main-navigation-width;
+
+        .menu-toggle {
+            display: none;
+        }
+    
+        #main-navigation-menu {
+            display: flex;
+        }
+    }
+
+
+    #main-navigation-menu .menu {
+        display: flex;
+        flex-direction: column;
+    }
+}

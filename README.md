@@ -1,7 +1,28 @@
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
-_s
+HLRL
 ===
+
+Development
+-----------
+
+## Wordpress Setup
+1. Download and install [Docker](https://download.docker.com/mac/stable/Docker.dmg).
+1. In a terminal:
+```sh
+docker swarm init
+docker stack deploy -c stack.yml hrlr
+```
+1. Open [localhost:8080](http://localhost:8080) in a browser.
+
+## Compiling Sass
+1. Set up [Homebrew(https://brew.sh/).
+1. In a terminal: `brew install sass/sass/sass`
+1. To compile: `sass --watch -I hrlr/sass hrlr/sass/style.scss hrlr/style.css`
+
+
+Theme Info
+----------
 
 Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 
@@ -18,14 +39,3 @@ Note: `.no-sidebar` styles are not automatically loaded.
 * Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
 * Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
 * Licensed under GPLv2 or later. :) Use it to make something cool.
-
-Development
------------
-
-1. Download and install [Docker](https://download.docker.com/mac/stable/Docker.dmg).
-1. In a terminal:
-```sh
-docker swarm init
-docker stack deploy -c stack.yml hrlr
-```
-1. Open [localhost:8080](http://localhost:8080) in a browser.
