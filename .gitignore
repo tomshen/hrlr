@@ -1,5 +1,6 @@
 /db
 /site
 hrlr/*.map
+hrlr/style.css
 
 .DS_Store
