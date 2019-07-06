@@ -1,4 +1,4 @@
-$main-navigation-height: 800px;
+$main-navigation-height: 550px;
 
 .main-navigation {
     display: flex;
@@ -37,34 +37,62 @@ $main-navigation-height: 800px;
         justify-content: space-between;
         padding: 10px;
 
-        > :last-child ul.menu {
+        > :last-child {
             font-size: 24px;
         }
     }
     
-    ul.menu {
+    .hrlr-menu {
         display: flex;
         flex-direction: column;
         font-size: 28px;
         margin: 0;
         padding: 0;
 
-        > li.menu-item {
+        sup {
+            font-size: 50%;
+            top: -0.8em;
+        }
+
+        .hrlr-menu-item {
             display: block;
-            padding: 7px;
-            padding-left: calc(7px + 1em);
-            text-indent: -1em;
+
+            > a {
+                display: block;
+                padding: 7px;
+                padding-left: calc(7px + 1em);
+                text-indent: -1em;
+            }
 
             &:hover {
                 background-color: $color-nav-highlight;
             }
+        }
+
+        .hrlr-menu-item-secondary {
+            display: block;
+            font-size: 16px;
+            padding: 7px;
+
+            > a:hover {
+                background-color: $color-nav-highlight;
+            }
+        }
+
+        .hrlr-menu-footnote {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        & + .hrlr-menu {
+            margin-top: 20px;
         }
     }
 
     &.toggled {
         background: white;
         height: 100vh;
-        max-width: 80%;
+        max-width: 90%;
         overflow-y: auto;
         width: $main-navigation-width;
 
@@ -83,7 +111,8 @@ $main-navigation-height: 800px;
 }
 
 @media screen and (min-width: $breakpoint-width-mobile) {
-    .main-navigation {
+    .main-navigation,
+    .main-navigation.toggled {
         background: white;
         flex: 1 0 $main-navigation-width;
         height: $main-navigation-height;
@@ -100,8 +129,28 @@ $main-navigation-height: 800px;
     }
 
 
-    #main-navigation-menu .menu {
+    #main-navigation-menu .hrlr-menu {
         display: flex;
         flex-direction: column;
+
+
+        .hrlr-menu-footnote {
+            display: none;
+            margin-top: 20px;
+        }
+
+        // TODO: do this with CSS variables if we don't need to support IE
+        .hrlr-menu-item:nth-of-type(1):hover ~ .hrlr-menu-footnote-1 {
+            display: block;
+        }
+        .hrlr-menu-item:nth-of-type(2):hover ~ .hrlr-menu-footnote-2 {
+            display: block;
+        }
+        .hrlr-menu-item:nth-of-type(3):hover ~ .hrlr-menu-footnote-3 {
+            display: block;
+        }
+        .hrlr-menu-item:nth-of-type(4):hover ~ .hrlr-menu-footnote-4 {
+            display: block;
+        }
     }
 }
