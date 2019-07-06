@@ -45,7 +45,7 @@ $main-navigation-height: 550px;
     .hrlr-menu {
         display: flex;
         flex-direction: column;
-        font-size: 28px;
+        font-size: 24px;
         margin: 0;
         padding: 0;
 
@@ -80,7 +80,7 @@ $main-navigation-height: 550px;
         }
 
         .hrlr-menu-footnote {
-            font-size: 16px;
+            font-size: 12px;
             margin-top: 10px;
         }
 
@@ -132,10 +132,11 @@ $main-navigation-height: 550px;
     #main-navigation-menu .hrlr-menu {
         display: flex;
         flex-direction: column;
-
+        font-size: 28px;
 
         .hrlr-menu-footnote {
             display: none;
+            font-size: 16px;
             margin-top: 20px;
         }
 
