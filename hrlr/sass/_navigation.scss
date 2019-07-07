@@ -50,6 +50,7 @@ $main-navigation-height: 550px;
         padding: 0;
 
         sup {
+            color: $color-footnotes;
             font-size: 50%;
             top: -0.8em;
         }
@@ -80,6 +81,7 @@ $main-navigation-height: 550px;
         }
 
         .hrlr-menu-footnote {
+            color: $color-footnotes;
             font-size: 12px;
             margin-top: 10px;
         }
