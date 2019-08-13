@@ -13,7 +13,7 @@ services:
       WORDPRESS_DB_NAME: exampledb
     volumes:
       - ./hrlr:/var/www/html/wp-content/themes/hrlr
-  
+
   db:
     image: mysql:5.7
     environment:
@@ -37,6 +37,7 @@ services:
       /bin/sh -c '
         sleep 10;
         wp core install --path="/var/www/html" --url="http://localhost:8080" --title="HRLR" --admin_user=admin --admin_password=admin --admin_email=admin@example.org;
+        wp plugin install advanced-custom-fields --activate;
         wp plugin install mammoth-docx-converter --activate;
         wp theme activate hrlr'
     volumes:

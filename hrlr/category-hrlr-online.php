@@ -15,27 +15,14 @@
 get_header();
 ?>
 
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			<div class="hrlr-posts-container">
-				<div class="hrlr-posts-header">
-					<h2 class="hrlr-posts-header-volume">Volume 50</h2>
-					<div class="hrlr-posts-header-date">2018-19</div>
-				</div>
-				<div class="hrlr-posts">
-					<?php $catquery = new WP_Query( 'category_name=hrlr&posts_per_page=5' ); ?>
-					<?php while($catquery->have_posts()) : $catquery->the_post(); ?>
-						<div class="hrlr-post">
-							<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-							<div class="hrlr-post-meta"><?php the_author(); ?></div>
-						</div>
-						<?php endwhile;
-					  	wp_reset_postdata();
-						?>
 
-					<a href="/category/hrlr/">See more</a>
-				</div>
-			</div><!-- #hrlr posts -->
+			<div class="archive-navigation">
+				<div class="archive-navigation-link"><a href="/category/hrlr">H. R. L. R.</a></div>
+				<div class="archive-navigation-link">HRLR Online</div>
+			</div>
 
 			<div class="online-posts-container">
 				<div class="online-posts-header">
