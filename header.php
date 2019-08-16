@@ -35,12 +35,21 @@
 						"A Jailhouse Lawyers' Manual",
 						"Trump Human Rights Tracker",
 					);
-					foreach ($page_titles as $index=>$title):
+
+					$page_titles = (object) [
+						"Human Rights Law Review" => '/category/hrlr',
+						"HRLR Online" => "/category/hrlr-online",
+						"A Jailhouse Lawyers' Manual" => "http://jlm.law.columbia.edu",
+						"Trump Human Rights Tracker" => "https://trumphumanrightstracker.law.columbia.edu",
+					];
+					$index = 1;
+					foreach ($page_titles as $title=>$url):
 				?>
 				<li class="hrlr-menu-item" >
-					<a href="<?php echo get_permalink(get_page_by_title($title)); ?>">
+					<a href="<?php echo $url; ?>">
 						<?php echo $title; ?>
-						<sup><?php echo ($index + 1); ?></sup>
+						<sup><?php echo ($index); ?></sup>
+						<?php $index++; ?>
 					</a>
 				</li>
 				<?php endforeach; ?>
