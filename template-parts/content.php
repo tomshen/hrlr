@@ -9,6 +9,7 @@
 
 ?>
 
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
@@ -25,6 +26,15 @@
 				hrlr_posted_on();
 				hrlr_posted_by();
 				?>
+			</div><!-- .entry-meta -->
+		<?php endif;
+
+		if ( 'hrlr' === get_post_type() ) :
+			?>
+			<div class="entry-meta">
+				<div> Issue <?php echo get_field('volume')->name; ?>.<?php echo get_field('issue')->slug; ?></div>
+				<div> <?php echo get_field('author_bio'); ?></div>
+				<div> <a href="<?php echo get_field('pdf'); ?>">Download the PDF</a>  </div>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->

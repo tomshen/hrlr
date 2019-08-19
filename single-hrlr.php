@@ -17,16 +17,6 @@ get_header();
 		while ( have_posts() ) :
 			the_post(); ?>
 
-
-			<div class="entry-content">
-					<div> <?php the_title(); ?></div>
-					<div> <?php echo get_field('author_name'); ?></div>
-					<div> <?php echo get_field('author_bio'); ?></div>
-					<div> <?php echo get_field('volume')->name; ?></div>
-					<div> <?php echo get_field('issue')->name; ?></div>
-					<div>PDF:  <?php echo get_field('pdf'); ?></div>
-			</div>
-
 			<?php get_template_part( 'template-parts/content', get_post_type() );
 
 			the_post_navigation();
