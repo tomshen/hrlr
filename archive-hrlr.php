@@ -12,7 +12,6 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
       <?php
-
       $volumes = get_terms( array(
           'taxonomy' => 'volumes',
           'hide_empty' => false,
@@ -69,12 +68,7 @@ get_header();
 
           wp_reset_postdata();
         }
-
-      }
-
-
-
-?>
+      } ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

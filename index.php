@@ -18,23 +18,67 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<div class="hrlr-posts-container">
-				<div class="hrlr-posts-header">
-					<h2 class="hrlr-posts-header-volume">Volume 50</h2>
-					<div class="hrlr-posts-header-date">2018-19</div>
-				</div>
-				<div class="hrlr-posts">
-					<?php $catquery = new WP_Query( 'category_name=hrlr&posts_per_page=5' ); ?>
-					<?php while($catquery->have_posts()) : $catquery->the_post(); ?>
-						<div class="hrlr-post">
-							<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-							<div class="hrlr-post-meta"><?php the_author(); ?></div>
-						</div>
-						<?php endwhile;
-					  	wp_reset_postdata();
-						?>
+				<?php
+				$volumes = get_terms( array(
+						'taxonomy' => 'volumes',
+						'hide_empty' => false,
+						'orderby' => 'start_year',
+						'order' => 'DESC',
+				) );
 
-					<a href="/category/hrlr/">See more</a>
-				</div>
+				$issues = get_terms( array(
+						'taxonomy' => 'issue',
+						'hide_empty' => false,
+						'orderby' => 'issue_number',
+						'order' => 'DESC',
+				) );
+
+				$volume = $volumes[0] ?>
+				<h2> Vol. <?php echo $volume->slug ?> <?php echo get_field('start_year', $volume) ?>-<?php echo substr(strval(get_field('start_year', $volume)+1), -2) ?></h2>
+				<?php foreach ($issues as $issue) { ?>
+						<?php
+						$args = [
+								'post_type' => 'hrlr',
+								'nopaging' => true,
+								'tax_query' => array(
+									'relation' => 'AND',
+									array(
+											'taxonomy' => 'volumes',
+											'field'    => 'slug',
+											'terms'    => $volume->slug,
+									),
+									array(
+											'taxonomy' => 'issue',
+											'field'    => 'slug',
+											'terms'    => $issue->slug,
+									),
+								),
+						];
+						$loop = new WP_Query($args);
+						if($loop->have_posts()) { ?>
+							<h3> No. <?php echo get_field('issue_number', $issue) ?> <?php echo get_field('season', $issue) ?>
+							<?php $issue_year =  get_field('start_year', $volume);
+										if (get_field('issue_number', $issue) == 3) $issue_year++;
+										echo $issue_year;
+										?>
+						 </h3>
+
+							<?php while ($loop->have_posts()) {
+									$loop->the_post();
+									?>
+									<div class="entry-content">
+											<h4> <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></h4>
+											<div> <?php echo get_field('author_name'); ?></div>
+									</div>
+									<?php
+							}
+						  wp_reset_postdata();
+							break;
+						} else {
+							wp_reset_postdata();
+						}
+					} ?>
+				<a href="/hrlr/">See more</a>
 			</div><!-- #hrlr posts -->
 
 			<div class="online-posts-container">
