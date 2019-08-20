@@ -37,8 +37,8 @@
 					);
 
 					$page_titles = (object) [
-						"Human Rights Law Review" => '/category/hrlr',
-						"HRLR Online" => "/category/hrlr-online",
+						"Human Rights Law Review" => '/hrlr',
+						"HRLR Online" => "/hrlr-online",
 						"A Jailhouse Lawyers' Manual" => "http://jlm.law.columbia.edu",
 						"Trump Human Rights Tracker" => "https://trumphumanrightstracker.law.columbia.edu",
 					];

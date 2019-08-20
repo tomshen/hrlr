@@ -84,6 +84,28 @@ get_header();
 			<div class="online-posts-container">
 				<div class="online-posts-header">
 					<h2 class="online-posts-header-volume">HRLR Online</h2>
+					<?php
+					$args = [
+							'post_type' => 'hrlr_online',
+							'posts_per_page' => 3,
+							'order' => 'DESC',
+							'orderby' => 'date',
+					];
+					$loop = new WP_Query($args);
+					while ($loop->have_posts()) {
+								$loop->the_post(); ?>
+								<div class="entry-content">
+										<h4> <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></h4>
+										<div> <?php echo get_field('author_name'); ?></div>
+										<div> <?php echo the_date("j F Y"); ?></div>
+										<div> <?php echo the_excerpt(); ?></div>
+								</div>
+								<?php
+						}
+						wp_reset_postdata();
+				?>
+
+
 					<?php $catquery = new WP_Query( 'category_name=hrlr-online&posts_per_page=5' ); ?>
 					<div class="online-posts">
 						<?php while($catquery->have_posts()) : $catquery->the_post(); ?>
@@ -94,7 +116,7 @@ get_header();
 						<?php endwhile;
 					  wp_reset_postdata();
 						?>
-						<a href="/category/hrlr-online/">See more</a>
+						<a href="/hrlr-online/">See more</a>
 					</div>
 				</div>
 			</div><!-- #online posts -->

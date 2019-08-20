@@ -36,6 +36,16 @@
 				<div> <?php echo get_field('author_bio'); ?></div>
 				<div> <a href="<?php echo get_field('pdf'); ?>">Download the PDF</a>  </div>
 			</div><!-- .entry-meta -->
+		<?php endif;
+
+		if ( 'hrlr_online' === get_post_type() ) :
+			?>
+			<div class="entry-meta">
+				<div> HRLR Online </div>
+				<div> <?php echo the_date("F j, Y"); ?></div>
+				<div> <?php echo get_field('author_bio'); ?></div>
+				<div> <a href="<?php echo get_field('pdf'); ?>">Download the PDF</a>  </div>
+			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
