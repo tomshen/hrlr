@@ -19,7 +19,7 @@
 			the_title( '<h2 class="entry-title headline-large"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;?>
 
-		<div class="entry-meta hrlr-online-headline-small"> <?php
+		<div class="entry-meta"> <?php
 		if ( 'post' === get_post_type() ) :
 			?>
 				<?php
@@ -30,18 +30,18 @@
 
 		if ( 'hrlr' === get_post_type() ) :
 			?>
-				<div> Issue <?php echo get_field('volume')->name; ?>.<?php echo get_field('issue')->slug; ?></div>
+				<div class="hrlr-online-headline-small"> Issue <?php echo get_field('volume')->name; ?>.<?php echo get_field('issue')->slug; ?></div>
 				<div class="secondary-text"> <?php echo get_field('author_bio'); ?></div>
-				<div class="secondary-text"> <a href="<?php echo get_field('pdf'); ?>">Download the PDF</a>  </div>
+				<a class="button" href="<?php echo get_field('pdf'); ?>">Download the PDF</a>
 		<?php endif;
 
 		if ( 'hrlr_online' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
-				<div> HRLR Online </div>
-				<div> <?php echo the_date("F j, Y"); ?></div>
+				<div class="hrlr-online-headline-small"> HRLR Online </div>
+				<div class="hrlr-online-headline-small"> <?php echo the_date("F j, Y"); ?></div>
 				<div class="secondary-text"> <?php echo get_field('author_bio'); ?></div>
-				<div class="secondary-text"> <a href="<?php echo get_field('pdf'); ?>">Download the PDF</a>  </div>
+				<a class="button" href="<?php echo get_field('pdf'); ?>">Download the PDF</a>
 		<?php endif; ?>
 
 	</div><!-- .entry-meta -->

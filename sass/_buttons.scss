@@ -1,4 +1,5 @@
 .button {
+  @include secondary-text;
   background-color: $color-background;
   border-radius: $border-radius;
   padding: 25px 25px 30px 25px;
