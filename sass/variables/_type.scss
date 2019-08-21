@@ -1,0 +1,73 @@
+$text-font: "Times New Roman", "Times", "serif";
+$hrlr-font: "Garamond", "Times New Roman", "Times", "serif";
+$hrlr-online-font: "Helvetica Neue", "Helvetica", "sans-serif";
+
+@mixin hrlr-headline-large {
+  font-family: $hrlr-font;
+  font-size: 54px;
+  letter-spacing: -0.45px;
+  line-height: 47px;
+  font-weight: 400;
+
+  @media (max-width: $breakpoint-width-mobile) {
+    font-size: 30px;
+    letter-spacing: -0.25px;
+    line-height: 33px;
+  }
+}
+
+@mixin hrlr-online-headline-large {
+  font-family: $hrlr-online-font;
+  font-size: 54px;
+  letter-spacing: -1.25px;
+  line-height: 47px;
+  font-weight: 400;
+
+  @media (max-width: $breakpoint-width-mobile) {
+    font-size: 30px;
+    letter-spacing: -0.38px;
+    line-height: 33px;
+  }
+}
+
+@mixin hrlr-headline-small {
+  font-family: $hrlr-font;
+  font-size: 30px;
+  letter-spacing: -0.25px;
+  line-height: 33px;
+  font-weight: 400;
+
+  @media (max-width: $breakpoint-width-mobile) {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+@mixin hrlr-online-headline-small {
+  font-family: $hrlr-online-font;
+  font-size: 30px;
+  letter-spacing: -0.38px;
+  line-height: 33px;
+  font-weight: 400;
+
+  @media (max-width: $breakpoint-width-mobile) {
+    font-size: 22px;
+    letter-spacing: -0.18px;
+    line-height: 30px;
+  }
+}
+
+@mixin text {
+  font-family: $text-font;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+@mixin secondary-text {
+  font-family: $hrlr-online-font;
+  font-size: 16px;
+  letter-spacing: -0.04;
+  line-height: 24px;
+  font-weight: 400;
+}

@@ -333,8 +333,82 @@ template {
 
 html,
 body {
-  color: #02011b;
+  color: #03001D;
   font-family: Times, serif;
+}
+
+.hrlr-headline-large, .type-hrlr .headline-large {
+  font-family: "Garamond", "Times New Roman", "Times", "serif";
+  font-size: 54px;
+  letter-spacing: -0.45px;
+  line-height: 47px;
+  font-weight: 400;
+}
+@media (max-width: 800px) {
+  .hrlr-headline-large, .type-hrlr .headline-large {
+    font-size: 30px;
+    letter-spacing: -0.25px;
+    line-height: 33px;
+  }
+}
+
+.hrlr-online-headline-large, .type-hrlr_online .headline-large {
+  font-family: "Helvetica Neue", "Helvetica", "sans-serif";
+  font-size: 54px;
+  letter-spacing: -1.25px;
+  line-height: 47px;
+  font-weight: 400;
+}
+@media (max-width: 800px) {
+  .hrlr-online-headline-large, .type-hrlr_online .headline-large {
+    font-size: 30px;
+    letter-spacing: -0.38px;
+    line-height: 33px;
+  }
+}
+
+.hrlr-headline-small, .type-hrlr .headline-small {
+  font-family: "Garamond", "Times New Roman", "Times", "serif";
+  font-size: 30px;
+  letter-spacing: -0.25px;
+  line-height: 33px;
+  font-weight: 400;
+}
+@media (max-width: 800px) {
+  .hrlr-headline-small, .type-hrlr .headline-small {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+.hrlr-online-headline-small, .type-hrlr_online .headline-small {
+  font-family: "Helvetica Neue", "Helvetica", "sans-serif";
+  font-size: 30px;
+  letter-spacing: -0.38px;
+  line-height: 33px;
+  font-weight: 400;
+}
+@media (max-width: 800px) {
+  .hrlr-online-headline-small, .type-hrlr_online .headline-small {
+    font-size: 22px;
+    letter-spacing: -0.18px;
+    line-height: 30px;
+  }
+}
+
+.text {
+  font-family: "Times New Roman", "Times", "serif";
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.secondary-text {
+  font-family: "Helvetica Neue", "Helvetica", "sans-serif";
+  font-size: 16px;
+  letter-spacing: -0.04;
+  line-height: 24px;
+  font-weight: 400;
 }
 
 /* Text meant only for screen readers. */
@@ -386,15 +460,26 @@ body {
   display: block;
 }
 
+.single-hrlr_online {
+  background-color: #EDF2FF;
+}
+
+.single-hrlr {
+  background-color: #F6F7F7;
+}
+
+.entry-content ol:last-child {
+  background-color: white;
+}
+
 .main-navigation {
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
   position: fixed;
   z-index: 10;
 }
 .main-navigation a {
-  color: #02011b;
+  color: #03001D;
   text-decoration: none;
 }
 .main-navigation .menu-toggle {
@@ -415,7 +500,6 @@ body {
 .main-navigation #main-navigation-menu {
   display: none;
   flex-direction: column;
-  height: 100%;
   justify-content: space-between;
   padding: 10px;
 }
@@ -423,14 +507,25 @@ body {
   font-size: 24px;
 }
 .main-navigation .hrlr-menu {
+  font-family: "Helvetica Neue", "Helvetica", "sans-serif";
+  font-size: 30px;
+  letter-spacing: -0.38px;
+  line-height: 33px;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
-  font-size: 24px;
   margin: 0;
   padding: 0;
 }
+@media (max-width: 800px) {
+  .main-navigation .hrlr-menu {
+    font-size: 22px;
+    letter-spacing: -0.18px;
+    line-height: 30px;
+  }
+}
 .main-navigation .hrlr-menu sup {
-  color: #36354a;
+  color: #03001D;
   font-size: 50%;
   top: -0.8em;
 }
@@ -447,15 +542,19 @@ body {
   background-color: #e8f0fb;
 }
 .main-navigation .hrlr-menu .hrlr-menu-item-secondary {
-  display: block;
+  font-family: "Helvetica Neue", "Helvetica", "sans-serif";
   font-size: 16px;
+  letter-spacing: -0.04;
+  line-height: 24px;
+  font-weight: 400;
+  display: block;
   padding: 7px;
 }
 .main-navigation .hrlr-menu .hrlr-menu-item-secondary > a:hover {
   background-color: #e8f0fb;
 }
 .main-navigation .hrlr-menu .hrlr-menu-footnote {
-  color: #36354a;
+  color: #03001D;
   font-size: 12px;
   margin-top: 10px;
 }
@@ -503,8 +602,12 @@ body {
     font-size: 28px;
   }
   #main-navigation-menu .hrlr-menu .hrlr-menu-footnote {
-    display: none;
+    font-family: "Helvetica Neue", "Helvetica", "sans-serif";
     font-size: 16px;
+    letter-spacing: -0.04;
+    line-height: 24px;
+    font-weight: 400;
+    display: none;
     margin-top: 20px;
   }
   #main-navigation-menu .hrlr-menu .hrlr-menu-item:nth-of-type(1):hover ~ .hrlr-menu-footnote-1 {
@@ -521,7 +624,7 @@ body {
   }
 }
 body {
-  background: #f7f7f7;
+  background: white;
 }
 
 .site {
@@ -531,7 +634,7 @@ body {
 }
 
 .site-title {
-  color: #02011b;
+  color: #03001D;
   display: flex;
   flex-direction: column;
   font-family: sans-serif;

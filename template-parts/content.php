@@ -14,28 +14,25 @@
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h1 class="entry-title headline-large">', '</h1>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+			the_title( '<h2 class="entry-title headline-large"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		endif;?>
 
+		<div class="entry-meta hrlr-online-headline-small"> <?php
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
 				<?php
 				hrlr_posted_on();
 				hrlr_posted_by();
 				?>
-			</div><!-- .entry-meta -->
 		<?php endif;
 
 		if ( 'hrlr' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
 				<div> Issue <?php echo get_field('volume')->name; ?>.<?php echo get_field('issue')->slug; ?></div>
-				<div> <?php echo get_field('author_bio'); ?></div>
-				<div> <a href="<?php echo get_field('pdf'); ?>">Download the PDF</a>  </div>
-			</div><!-- .entry-meta -->
+				<div class="secondary-text"> <?php echo get_field('author_bio'); ?></div>
+				<div class="secondary-text"> <a href="<?php echo get_field('pdf'); ?>">Download the PDF</a>  </div>
 		<?php endif;
 
 		if ( 'hrlr_online' === get_post_type() ) :
@@ -43,10 +40,11 @@
 			<div class="entry-meta">
 				<div> HRLR Online </div>
 				<div> <?php echo the_date("F j, Y"); ?></div>
-				<div> <?php echo get_field('author_bio'); ?></div>
-				<div> <a href="<?php echo get_field('pdf'); ?>">Download the PDF</a>  </div>
-			</div><!-- .entry-meta -->
+				<div class="secondary-text"> <?php echo get_field('author_bio'); ?></div>
+				<div class="secondary-text"> <a href="<?php echo get_field('pdf'); ?>">Download the PDF</a>  </div>
 		<?php endif; ?>
+
+	</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
 	<?php hrlr_post_thumbnail(); ?>

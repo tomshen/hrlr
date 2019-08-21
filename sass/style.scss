@@ -2,10 +2,12 @@
 
 @import "variables/colors";
 @import "variables/sizes";
+@import "variables/type";
 @import "typography";
 
 @import "modules/accessibility";
 @import "modules/infinite-scroll";
 
+@import "articles";
 @import "navigation";
 @import "site";

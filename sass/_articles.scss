@@ -1,0 +1,12 @@
+.single-hrlr_online {
+  background-color: $color-background-hrlr-online;
+}
+
+.single-hrlr {
+  background-color: $color-background-hrlr;
+}
+
+// Assume that a OL as the last item of the content well is a footnotes div
+.entry-content ol:last-child {
+  background-color: $color-background;
+}

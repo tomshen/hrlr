@@ -3,3 +3,28 @@ body {
     color: $color-text;
     font-family: Times, serif;
 }
+
+
+.hrlr-headline-large, .type-hrlr .headline-large {
+  @include hrlr-headline-large;
+}
+
+.hrlr-online-headline-large, .type-hrlr_online .headline-large {
+  @include hrlr-online-headline-large;
+}
+
+.hrlr-headline-small, .type-hrlr .headline-small {
+  @include hrlr-headline-small;
+}
+
+.hrlr-online-headline-small, .type-hrlr_online .headline-small {
+  @include hrlr-online-headline-small;
+}
+
+.text {
+  @include text;
+}
+
+.secondary-text {
+  @include secondary-text;
+}
