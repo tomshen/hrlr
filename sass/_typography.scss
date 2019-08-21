@@ -28,3 +28,10 @@ body {
 .secondary-text {
   @include secondary-text;
 }
+
+
+
+
+a {
+  color: $color-text;
+}

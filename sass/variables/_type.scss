@@ -2,7 +2,21 @@ $text-font: "Times New Roman", "Times", "serif";
 $hrlr-font: "Garamond", "Times New Roman", "Times", "serif";
 $hrlr-online-font: "Helvetica Neue", "Helvetica", "sans-serif";
 
+
+
+@mixin subtle-link {
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 @mixin hrlr-headline-large {
+  @include subtle-link;
   font-family: $hrlr-font;
   font-size: 54px;
   letter-spacing: -0.45px;
@@ -17,6 +31,7 @@ $hrlr-online-font: "Helvetica Neue", "Helvetica", "sans-serif";
 }
 
 @mixin hrlr-online-headline-large {
+  @include subtle-link;
   font-family: $hrlr-online-font;
   font-size: 54px;
   letter-spacing: -1.25px;
@@ -31,6 +46,7 @@ $hrlr-online-font: "Helvetica Neue", "Helvetica", "sans-serif";
 }
 
 @mixin hrlr-headline-small {
+  @include subtle-link;
   font-family: $hrlr-font;
   font-size: 30px;
   letter-spacing: -0.25px;
@@ -44,6 +60,7 @@ $hrlr-online-font: "Helvetica Neue", "Helvetica", "sans-serif";
 }
 
 @mixin hrlr-online-headline-small {
+  @include subtle-link;
   font-family: $hrlr-online-font;
   font-size: 30px;
   letter-spacing: -0.38px;
@@ -58,6 +75,7 @@ $hrlr-online-font: "Helvetica Neue", "Helvetica", "sans-serif";
 }
 
 @mixin text {
+  @include subtle-link;
   font-family: $text-font;
   font-size: 16px;
   line-height: 21px;
@@ -65,6 +83,7 @@ $hrlr-online-font: "Helvetica Neue", "Helvetica", "sans-serif";
 }
 
 @mixin secondary-text {
+  @include subtle-link;
   font-family: $hrlr-online-font;
   font-size: 16px;
   letter-spacing: -0.04;

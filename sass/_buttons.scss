@@ -1,0 +1,11 @@
+.button {
+  background-color: $color-background;
+  border-radius: $border-radius;
+  padding: 25px 25px 30px 25px;
+  display: block;
+  text-decoration: none;
+
+  &.on-white {
+    $color-background: $color-background-hrlr;
+  }
+}

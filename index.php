@@ -78,7 +78,7 @@ get_header();
 							wp_reset_postdata();
 						}
 					} ?>
-				<a class="secondary-text" href="/hrlr/">See more</a>
+				<a class="secondary-text button" href="/hrlr/">See more</a>
 			</div><!-- #hrlr posts -->
 
 			<div class="hrlr-online-posts-container">
@@ -104,7 +104,7 @@ get_header();
 						}
 						wp_reset_postdata();
 				?>
-					<a class="secondary-text" href="/hrlr-online/">See more</a>
+					<a class="secondary-text button" href="/hrlr-online/">See more</a>
 					</div>
 				</div>
 			</div><!-- #online posts -->
