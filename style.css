@@ -548,6 +548,7 @@ body {
 }
 .main-navigation .hrlr-menu .hrlr-menu-item:hover {
   background-color: #e8f0fb;
+  border-radius: 10px;
 }
 .main-navigation .hrlr-menu .hrlr-menu-item-secondary {
   font-family: "Helvetica Neue", "Helvetica", "sans-serif";
