@@ -472,6 +472,14 @@ body {
   background-color: white;
 }
 
+.home, .post-type-archive-hrlr {
+  background-color: #F6F7F7;
+}
+
+.post-type-archive-hrlr_online, .hrlr-online-posts-container {
+  background-color: #EDF2FF;
+}
+
 .main-navigation {
   display: flex;
   flex-direction: column;

@@ -81,7 +81,7 @@ get_header();
 				<a class="secondary-text" href="/hrlr/">See more</a>
 			</div><!-- #hrlr posts -->
 
-			<div class="online-posts-container">
+			<div class="hrlr-online-posts-container">
 				<div class="online-posts-header">
 					<h2 class="online-posts-header-volume hrlr-online-headline-large">HRLR Online</h2>
 					<?php
