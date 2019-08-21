@@ -101,12 +101,6 @@
 					<span>Human Rights</span>
 					<span>Law Review</span>
 				</a>
-				<?php
-				$hrlr_description = get_bloginfo( 'description', 'display' );
-				if ( $hrlr_description || is_customize_preview() ) :
-					?>
-					<p class="site-description"><?php echo $hrlr_description; /* WPCS: xss ok. */ ?></p>
-				<?php endif; ?>
 			</div><!-- .site-branding -->
 		</header><!-- #masthead -->
 
