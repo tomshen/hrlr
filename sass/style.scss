@@ -4,11 +4,13 @@
 @import "variables/sizes";
 @import "variables/type";
 @import "typography";
+@import "layout";
 @import "buttons";
 
 @import "modules/accessibility";
 @import "modules/infinite-scroll";
 
+@import "home";
 @import "articles";
 @import "archives";
 @import "navigation";

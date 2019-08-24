@@ -1,7 +1,46 @@
-.home, .post-type-archive-hrlr {
+.post-type-archive-hrlr {
   background-color: $color-background-hrlr;
 }
 
-.post-type-archive-hrlr_online, .hrlr-online-posts-container {
+.post-type-archive-hrlr_online {
   background-color: $color-background-hrlr-online;
+}
+
+.publication-navigation {
+  grid-column: 10 / span 10
+}
+
+
+.post-type-archive-hrlr {
+  h2 {
+    grid-column: 2 / span 22;
+  }
+
+  h3 {
+    grid-column: 2 / span 22;
+    border-top: 1px solid $color-text;
+    margin-bottom: -3em;
+  }
+
+  .entry-content {
+    grid-column: 12 / span 12;
+    border-bottom: 1px solid $color-text;
+  }
+}
+
+.post-type-archive-hrlr_online {
+  h2 {
+    grid-column: 2 / span 22;
+    border-bottom: 1px solid $color-text;
+  }
+
+  .meta-info {
+    grid-column: 2 / span 10;
+  }
+
+  .post-info {
+    grid-column: 12 / span 11;
+  }
+
+
 }

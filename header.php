@@ -104,4 +104,17 @@
 			</div><!-- .site-branding -->
 		</header><!-- #masthead -->
 
+	<?php if (is_post_type_archive( ["hrlr", "hrlr_online"] )): ?>
+		<div class="publication-navigation">
+			<div class="publication-navigation-item hrlr-headline-large">
+				<a href="/hrlr/">H. R. L. R.</a>
+			</div>
+			<div class="publication-navigation-item hrlr-online-headline-large">
+				<a href="/hrlr-online/">HRLR Online</a>
+			</div>
+		</div>
+	<?php endif; ?>
+
+
+
 		<div id="content" class="site-content">

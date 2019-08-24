@@ -1,13 +1,3 @@
-body {
-    background: $color-background;
-}
-
-.site {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-}
-
 .site-title {
     color: $color-text;
     display: flex;
@@ -22,12 +12,7 @@ body {
     text-transform: uppercase;
 }
 
-.body {
-    flex: 1 1 auto;
-}
-
-@media screen and (min-width: $breakpoint-width-mobile) {
-    .body {
-        width: calc(100% - #{$main-navigation-width} - 40px);
-    }
+#masthead {
+  grid-column-start: 2;
+  grid-column-end: 10;
 }

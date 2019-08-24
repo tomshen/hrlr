@@ -2,4 +2,7 @@ $breakpoint-width-mobile: 800px;
 
 $main-navigation-width: 300px;
 
+// main navigation takes up 6 grid columns on the 24 column grid on the homepage (only)
+$main-navigation-homepage-width: calc((100% - (15px * 23)) * (6 / 24) + (15px * 6));
+
 $border-radius: 10px;

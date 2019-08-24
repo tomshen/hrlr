@@ -1,0 +1,31 @@
+.body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+}
+
+.site-content {
+  grid-column: 1 / 4;
+}
+
+.site-main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+}
+
+@media screen and (min-width: $breakpoint-width-mobile) {
+  .body {
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 15px;
+  }
+
+  .site-content {
+    grid-column: 1 / 24;
+  }
+
+  .site-main {
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 15px;
+  }
+}

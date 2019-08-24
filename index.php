@@ -82,7 +82,6 @@ get_header();
 			</div><!-- #hrlr posts -->
 
 			<div class="hrlr-online-posts-container">
-				<div class="online-posts-header">
 					<h2 class="online-posts-header-volume hrlr-online-headline-large">HRLR Online</h2>
 					<?php
 					$args = [
@@ -105,7 +104,6 @@ get_header();
 						wp_reset_postdata();
 				?>
 					<a class="secondary-text button" href="/hrlr-online/">See more</a>
-					</div>
 				</div>
 			</div><!-- #online posts -->
 

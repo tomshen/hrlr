@@ -1,14 +1,10 @@
 $main-navigation-height: 100vh;
 
 .main-navigation {
-    display: flex;
-    flex-direction: column;
     z-index: 10; // to be above footnotes
-
-    a {
-        color: $color-text;
-        text-decoration: none;
-    }
+    position: fixed;
+    top: 0;
+    right: 0;
 
     .menu-toggle {
         background: none;
@@ -112,20 +108,18 @@ $main-navigation-height: 100vh;
 }
 
 @media screen and (min-width: $breakpoint-width-mobile) {
-    .main-navigation,
-    .main-navigation.toggled {
+    .home .main-navigation,
+    .home .main-navigation.toggled {
         background: white;
-        flex: 1 0 $main-navigation-width;
+        width: $main-navigation-homepage-width;
         height: $main-navigation-height;
-        position: relative;
-        max-width: $main-navigation-width;
 
         .menu-toggle {
             display: none;
         }
 
         #main-navigation-menu {
-            display: flex;
+          background-color: white;
         }
     }
 

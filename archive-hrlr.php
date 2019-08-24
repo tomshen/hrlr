@@ -11,16 +11,6 @@ get_header();
 ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-
-      <div class="publication-navigation">
-				<div class="publication-navigation-item hrlr-headline-large">
-					H. R. L. R.
-				</div>
-				<div class="publication-navigation-item hrlr-online-headline-large">
-				  <a href="/hrlr-online/">HRLR Online</a>
-				</div>
-			</div>
-
       <?php
       $volumes = get_terms( array(
           'taxonomy' => 'volumes',

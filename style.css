@@ -452,6 +452,37 @@ a {
   color: #03001D;
 }
 
+.body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+}
+
+.site-content {
+  grid-column: 1/4;
+}
+
+.site-main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+}
+
+@media screen and (min-width: 800px) {
+  .body {
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 15px;
+  }
+
+  .site-content {
+    grid-column: 1/24;
+  }
+
+  .site-main {
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 15px;
+  }
+}
 .button {
   font-family: "Helvetica Neue", "Helvetica", "sans-serif";
   font-size: 16px;
@@ -519,6 +550,36 @@ a {
   display: block;
 }
 
+.home {
+  background-color: #F6F7F7;
+}
+
+.hrlr-online-posts-container {
+  background-color: #EDF2FF;
+}
+
+.home .hrlr-posts-container, .home .hrlr-online-posts-container {
+  grid-column-start: 1;
+  grid-column-end: span 18;
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-column-gap: 15px;
+}
+.home .hrlr-posts-container h2, .home .hrlr-online-posts-container h2 {
+  border-bottom: 1px solid #03001D;
+  grid-column: 2/span 16;
+}
+.home .hrlr-posts-container .entry-content, .home .hrlr-online-posts-container .entry-content {
+  grid-column: 8/span 10;
+  border-bottom: 1px solid #03001D;
+}
+.home .hrlr-posts-container h3, .home .hrlr-online-posts-container h3 {
+  grid-column: 2/span 6;
+}
+.home .hrlr-posts-container .button, .home .hrlr-online-posts-container .button {
+  grid-column: 8/span 10;
+}
+
 .single-hrlr_online {
   background-color: #EDF2FF;
 }
@@ -531,22 +592,47 @@ a {
   background-color: white;
 }
 
-.home, .post-type-archive-hrlr {
+.post-type-archive-hrlr {
   background-color: #F6F7F7;
 }
 
-.post-type-archive-hrlr_online, .hrlr-online-posts-container {
+.post-type-archive-hrlr_online {
   background-color: #EDF2FF;
 }
 
-.main-navigation {
-  display: flex;
-  flex-direction: column;
-  z-index: 10;
+.publication-navigation {
+  grid-column: 10/span 10;
 }
-.main-navigation a {
-  color: #03001D;
-  text-decoration: none;
+
+.post-type-archive-hrlr h2 {
+  grid-column: 2/span 22;
+}
+.post-type-archive-hrlr h3 {
+  grid-column: 2/span 22;
+  border-top: 1px solid #03001D;
+  margin-bottom: -3em;
+}
+.post-type-archive-hrlr .entry-content {
+  grid-column: 12/span 12;
+  border-bottom: 1px solid #03001D;
+}
+
+.post-type-archive-hrlr_online h2 {
+  grid-column: 2/span 22;
+  border-bottom: 1px solid #03001D;
+}
+.post-type-archive-hrlr_online .meta-info {
+  grid-column: 2/span 10;
+}
+.post-type-archive-hrlr_online .post-info {
+  grid-column: 12/span 11;
+}
+
+.main-navigation {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 .main-navigation .menu-toggle {
   background: none;
@@ -659,21 +745,19 @@ a {
 }
 
 @media screen and (min-width: 800px) {
-  .main-navigation,
-.main-navigation.toggled {
+  .home .main-navigation,
+.home .main-navigation.toggled {
     background: white;
-    flex: 1 0 300px;
+    width: calc((100% - (15px * 23)) * (6 / 24) + (15px * 6));
     height: 100vh;
-    position: relative;
-    max-width: 300px;
   }
-  .main-navigation .menu-toggle,
-.main-navigation.toggled .menu-toggle {
+  .home .main-navigation .menu-toggle,
+.home .main-navigation.toggled .menu-toggle {
     display: none;
   }
-  .main-navigation #main-navigation-menu,
-.main-navigation.toggled #main-navigation-menu {
-    display: flex;
+  .home .main-navigation #main-navigation-menu,
+.home .main-navigation.toggled #main-navigation-menu {
+    background-color: white;
   }
 
   #main-navigation-menu .hrlr-menu {
@@ -709,16 +793,6 @@ a {
     display: block;
   }
 }
-body {
-  background: white;
-}
-
-.site {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-}
-
 .site-title {
   color: #03001D;
   display: flex;
@@ -733,14 +807,9 @@ body {
   text-transform: uppercase;
 }
 
-.body {
-  flex: 1 1 auto;
-}
-
-@media screen and (min-width: 800px) {
-  .body {
-    width: calc(100% - 300px - 40px);
-  }
+#masthead {
+  grid-column-start: 2;
+  grid-column-end: 10;
 }
 
 /*# sourceMappingURL=style.css.map */
