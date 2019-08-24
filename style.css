@@ -11,6 +11,7 @@ html {
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
+  box-sizing: content-box;
 }
 
 /* Sections
@@ -541,7 +542,6 @@ a {
 .main-navigation {
   display: flex;
   flex-direction: column;
-  position: fixed;
   z-index: 10;
 }
 .main-navigation a {
@@ -568,6 +568,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   padding: 10px;
+  position: fixed;
 }
 .main-navigation #main-navigation-menu > :last-child {
   font-size: 24px;
@@ -662,7 +663,7 @@ a {
 .main-navigation.toggled {
     background: white;
     flex: 1 0 300px;
-    height: 800px;
+    height: 100vh;
     position: relative;
     max-width: 300px;
   }

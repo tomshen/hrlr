@@ -1,9 +1,8 @@
-$main-navigation-height: 800px;
+$main-navigation-height: 100vh;
 
 .main-navigation {
     display: flex;
     flex-direction: column;
-    position: fixed;
     z-index: 10; // to be above footnotes
 
     a {
@@ -34,6 +33,7 @@ $main-navigation-height: 800px;
         flex-direction: column;
         justify-content: space-between;
         padding: 10px;
+        position: fixed;
 
         > :last-child {
             font-size: 24px;
