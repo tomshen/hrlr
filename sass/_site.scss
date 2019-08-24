@@ -24,13 +24,10 @@ body {
 
 .body {
     flex: 1 1 auto;
-    max-width: calc(100% - 40px);
-    padding: 20px;
 }
 
 @media screen and (min-width: $breakpoint-width-mobile) {
     .body {
-        max-width: 800px;
         width: calc(100% - #{$main-navigation-width} - 40px);
     }
 }

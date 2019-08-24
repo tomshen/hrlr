@@ -662,7 +662,7 @@ a {
 .main-navigation.toggled {
     background: white;
     flex: 1 0 300px;
-    height: 550px;
+    height: 800px;
     position: relative;
     max-width: 300px;
   }
@@ -734,13 +734,10 @@ body {
 
 .body {
   flex: 1 1 auto;
-  max-width: calc(100% - 40px);
-  padding: 20px;
 }
 
 @media screen and (min-width: 800px) {
   .body {
-    max-width: 800px;
     width: calc(100% - 300px - 40px);
   }
 }
