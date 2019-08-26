@@ -339,7 +339,7 @@ body {
 }
 
 .hrlr-headline-large, .type-hrlr .headline-large {
-  font-family: "Garamond", "Times New Roman", "Times", "serif";
+  font-family: "Burgess", "Garamond", "Times New Roman", "Times", "serif";
   font-size: 54px;
   letter-spacing: -0.45px;
   line-height: 47px;
@@ -360,7 +360,7 @@ body {
 }
 
 .hrlr-online-headline-large, .type-hrlr_online .headline-large {
-  font-family: "Helvetica Neue", "Helvetica", "sans-serif";
+  font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
   font-size: 54px;
   letter-spacing: -1.25px;
   line-height: 47px;
@@ -381,7 +381,7 @@ body {
 }
 
 .hrlr-headline-small, .type-hrlr .headline-small {
-  font-family: "Garamond", "Times New Roman", "Times", "serif";
+  font-family: "Burgess", "Garamond", "Times New Roman", "Times", "serif";
   font-size: 30px;
   letter-spacing: -0.25px;
   line-height: 33px;
@@ -401,7 +401,7 @@ body {
 }
 
 .hrlr-online-headline-small, .type-hrlr_online .headline-small {
-  font-family: "Helvetica Neue", "Helvetica", "sans-serif";
+  font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
   font-size: 30px;
   letter-spacing: -0.38px;
   line-height: 33px;
@@ -435,7 +435,7 @@ body {
 }
 
 .secondary-text {
-  font-family: "Helvetica Neue", "Helvetica", "sans-serif";
+  font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
   font-size: 16px;
   letter-spacing: -0.04;
   line-height: 24px;
@@ -484,7 +484,7 @@ a {
   }
 }
 .button {
-  font-family: "Helvetica Neue", "Helvetica", "sans-serif";
+  font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
   font-size: 16px;
   letter-spacing: -0.04;
   line-height: 24px;
@@ -660,7 +660,7 @@ a {
   font-size: 24px;
 }
 .main-navigation .hrlr-menu {
-  font-family: "Helvetica Neue", "Helvetica", "sans-serif";
+  font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
   font-size: 30px;
   letter-spacing: -0.38px;
   line-height: 33px;
@@ -702,7 +702,7 @@ a {
   border-radius: 10px;
 }
 .main-navigation .hrlr-menu .hrlr-menu-item-secondary {
-  font-family: "Helvetica Neue", "Helvetica", "sans-serif";
+  font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
   font-size: 16px;
   letter-spacing: -0.04;
   line-height: 24px;
@@ -766,7 +766,7 @@ a {
     font-size: 28px;
   }
   #main-navigation-menu .hrlr-menu .hrlr-menu-footnote {
-    font-family: "Helvetica Neue", "Helvetica", "sans-serif";
+    font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
     font-size: 16px;
     letter-spacing: -0.04;
     line-height: 24px;

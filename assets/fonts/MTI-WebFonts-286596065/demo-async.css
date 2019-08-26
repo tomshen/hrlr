@@ -1,0 +1,15 @@
+    @font-face{
+        font-family:"Neue Haas Unica W04 Bold";
+        src:url("Fonts/1492043/40d7aa1f-ca63-4fe3-9e10-41a87c7c1ee7.eot?#iefix");
+        src:url("Fonts/1492043/40d7aa1f-ca63-4fe3-9e10-41a87c7c1ee7.eot?#iefix") format("eot"),url("Fonts/1492043/c1189892-2117-4b4f-bdbc-c2483115c58d.woff2") format("woff2"),url("Fonts/1492043/13fb76cf-cc84-4ee6-80e9-f472a123b2d3.woff") format("woff"),url("Fonts/1492043/e2a6861c-46fe-436b-85fc-e36505d20561.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Neue Haas Unica W04 Regular";
+        src:url("Fonts/1492063/aaa2c11e-e459-43b4-8ad2-8c7c1de5c4e3.eot?#iefix");
+        src:url("Fonts/1492063/aaa2c11e-e459-43b4-8ad2-8c7c1de5c4e3.eot?#iefix") format("eot"),url("Fonts/1492063/773f22a7-9bd8-48bf-8331-9f3b52306ac2.woff2") format("woff2"),url("Fonts/1492063/60bebbcf-ba00-4ac4-ad6b-a350fd1903bf.woff") format("woff"),url("Fonts/1492063/7e3bd97a-acff-4781-9d63-80f4111a637e.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Neue Haas Unica W04 Hea1492584";
+        src:url("Fonts/1492584/d2d20958-b8af-4ead-9d20-40e7f73fed27.eot?#iefix");
+        src:url("Fonts/1492584/d2d20958-b8af-4ead-9d20-40e7f73fed27.eot?#iefix") format("eot"),url("Fonts/1492584/14edc779-3a2a-4f43-b759-691d28f4942c.woff2") format("woff2"),url("Fonts/1492584/2b711ce0-e7a4-4569-9c98-3e1dbe54720d.woff") format("woff"),url("Fonts/1492584/98595864-b5cc-46a4-b6cc-c9470802c8f5.ttf") format("truetype");
+    }
