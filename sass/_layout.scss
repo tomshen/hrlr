@@ -1,31 +1,31 @@
 .body {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 20px;
+  grid-template-columns: $grid-mobile;
+  grid-column-gap: $grid-mobile-gap;
 }
 
 .site-content {
-  grid-column: 1 / 4;
+  grid-column: $grid-mobile-span-full-width;
 }
 
 .site-main, .entry-header, .post-entry-content, .entry-footer {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 20px;
+  grid-template-columns: $grid-mobile;
+  grid-column-gap: $grid-mobile-gap;
 }
 
 @media screen and (min-width: $breakpoint-width-mobile) {
   .body {
-    grid-template-columns: repeat(24, 1fr);
-    grid-column-gap: 15px;
+    grid-template-columns: $grid-desktop;
+    grid-column-gap: $grid-desktop-gap;
   }
 
   .site-content, article, .entry-header, .post-entry-content, .entry-footer {
-    grid-column: 1 / span 24;
+    grid-column: $grid-desktop-span-full-width;
   }
 
   .site-main, .entry-header, .post-entry-content, .entry-footer {
-    grid-template-columns: repeat(24, 1fr);
-    grid-column-gap: 15px;
+    grid-template-columns: $grid-desktop;
+    grid-column-gap: $grid-desktop-gap;
   }
 }

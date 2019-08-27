@@ -6,3 +6,11 @@ $main-navigation-width: 300px;
 $main-navigation-homepage-width: calc((100% - (15px * 23)) * (6 / 24) + (15px * 6));
 
 $border-radius: 10px;
+
+$grid-mobile: repeat(4, 1fr);
+$grid-mobile-span-full-width: 1 / span 4;
+$grid-mobile-gap: 20px;
+
+$grid-desktop: repeat(24, 1fr);
+$grid-desktop-span-full-width: 1 / span 24;
+$grid-desktop-gap: 15px;
