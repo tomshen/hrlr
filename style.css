@@ -342,7 +342,7 @@ body {
   font-family: "Burgess", "Garamond", "Times New Roman", "Times", "serif";
   font-size: 54px;
   letter-spacing: -0.45px;
-  line-height: 47px;
+  line-height: 54px;
   font-weight: 400;
 }
 .hrlr-headline-large a, .type-hrlr .headline-large a {
@@ -363,7 +363,7 @@ body {
   font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
   font-size: 54px;
   letter-spacing: -1.25px;
-  line-height: 47px;
+  line-height: 54px;
   font-weight: 400;
 }
 .hrlr-online-headline-large a, .type-hrlr_online .headline-large a {
@@ -620,7 +620,7 @@ a {
   font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
   font-size: 54px;
   letter-spacing: -1.25px;
-  line-height: 47px;
+  line-height: 54px;
   font-weight: 400;
 }
 .single-hrlr_online .nav-links a {
@@ -644,7 +644,7 @@ a {
   font-family: "Burgess", "Garamond", "Times New Roman", "Times", "serif";
   font-size: 54px;
   letter-spacing: -0.45px;
-  line-height: 47px;
+  line-height: 54px;
   font-weight: 400;
 }
 .single-hrlr .nav-links a {
