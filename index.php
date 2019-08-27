@@ -66,7 +66,7 @@ get_header();
 							<?php while ($loop->have_posts()) {
 									$loop->the_post();
 									?>
-									<div class="entry-content">
+									<div class="homepage-entry-content">
 											<h4 class="hrlr-headline-small"> <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></h4>
 											<div class="secondary-text"> <?php echo get_field('author_name'); ?></div>
 									</div>
@@ -93,7 +93,7 @@ get_header();
 					$loop = new WP_Query($args);
 					while ($loop->have_posts()) {
 								$loop->the_post(); ?>
-								<div class="entry-content secondary-text">
+								<div class="homepage-entry-content secondary-text">
 										<h4 class="hrlr-online-headline-small"> <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></h4>
 										<div> <?php echo get_field('author_name'); ?></div>
 										<div> <?php echo the_date("j F Y"); ?></div>

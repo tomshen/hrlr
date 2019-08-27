@@ -8,7 +8,7 @@
   grid-column: 1 / 4;
 }
 
-.site-main {
+.site-main, .entry-header, .entry-content, .entry-footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 20px;
@@ -20,11 +20,11 @@
     grid-column-gap: 15px;
   }
 
-  .site-content {
-    grid-column: 1 / 24;
+  .site-content, article, .entry-header, .entry-content, .entry-footer {
+    grid-column: 1 / span 24;
   }
 
-  .site-main {
+  .site-main, .entry-header, .entry-content, .entry-footer {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 15px;
   }

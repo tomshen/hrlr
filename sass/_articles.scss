@@ -1,12 +1,97 @@
 .single-hrlr_online {
   background-color: $color-background-hrlr-online;
+
+  .nav-links {
+    @include hrlr-online-headline-large
+  }
 }
 
 .single-hrlr {
   background-color: $color-background-hrlr;
+
+  .nav-links {
+    @include hrlr-headline-large
+  }
+}
+
+
+.post-navigation {
+    grid-column: 2 / span 22;
+    div {
+      border-top: 1px solid $color-text;  
+    }
 }
 
 // Assume that a OL as the last item of the content well is a footnotes div
 .entry-content ol:last-child {
   background-color: $color-background;
+}
+
+
+.single-hrlr, .single-hrlr_online {
+  .entry-title {
+    grid-column-start: 2;
+    grid-column-end: span 22;
+  }
+
+  .entry-meta {
+    grid-column: 2 / span 22;
+  }
+
+  .hrlr-issue-number, .hrlr-online-issue {
+    grid-column: 2 / span 4;
+  }
+
+  .hrlr-online-date {
+    grid-column: 6 / span 4;
+  }
+
+  .entry-content {
+    .author-bio {
+        grid-column: 17 / span 7;
+    }
+
+    > * {
+      grid-column: 4 / span 10;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: $hrlr-online-font;
+      font-weight: 400 !important;
+    }
+
+    h1 {
+      @include hrlr-online-headline-small;
+      border-top: 1px solid $color-text;
+      grid-column: 2 / span 22;
+    }
+
+    h2, h3, h4, h5, h6 {
+      font-weight: 400 !important;
+    }
+
+
+
+
+    sup > a {
+      display: inline-block;
+      padding: 8px 1px;
+      background-color: $color-background;
+      border-radius: 3px;
+
+    }
+
+    ol:last-of-type {
+      background-color: $color-background;
+      border-radius: $border-radius;
+
+      &::before {
+        content: "Citations";
+        @include hrlr-online-headline-small;
+      }
+    }
+  }
+
+  .download-button {
+    grid-column: 17 / span 7;
+  }
 }
