@@ -140,13 +140,8 @@
 	<div class="body">
 		<header id="masthead" class="site-header">
 			<div class="site-branding">
-				<?php
-				the_custom_logo();
-				?>
 				<a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<span>Columbia</span>
-					<span>Human Rights</span>
-					<span>Law Review</span>
+					<img src="<?php echo esc_url( home_url( '/wp-content/themes/hrlr/assets/icons/logo.svg' ) );?>">
 				</a>
 			</div><!-- .site-branding -->
 		</header><!-- #masthead -->
