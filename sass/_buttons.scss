@@ -5,8 +5,43 @@
   padding: 25px 25px 30px 25px;
   display: block;
   text-decoration: none;
+  position: relative ;
+
+  &:hover {
+    opacity: .7;
+  }
 
   &.on-white {
     $color-background: $color-background-hrlr;
+  }
+
+  &.forwards::after {
+      content: '.';
+      display: block;
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      bottom: 25px;
+      text-indent: -9999px;
+      width: 15px;
+      background: url(/wp-content/themes/hrlr/assets/icons/arrow_forward.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+  }
+
+  &.downwards::after {
+      content: '.';
+      display: block;
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      bottom: 25px;
+      text-indent: -9999px;
+      width: 15px;
+      background: url(/wp-content/themes/hrlr/assets/icons/arrow_downward.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
   }
 }

@@ -30,7 +30,7 @@
 		if ( 'hrlr' === get_post_type() ) :
 			?>
 				<div class="hrlr-online-headline-small hrlr-issue-number"> Issue <?php echo get_field('volume')->name; ?>.<?php echo get_field('issue')->slug; ?></div>
-				<a class="button download-button" href="<?php echo get_field('pdf'); ?>">Download the PDF</a>
+				<a class="button download-button downwards" href="<?php echo get_field('pdf'); ?>">Download the PDF</a>
 		<?php endif;
 
 		if ( 'hrlr_online' === get_post_type() ) :
@@ -39,7 +39,7 @@
 					HRLR Online
 				</div>
 				<div class="hrlr-online-headline-small hrlr-online-date"> <?php echo the_date("F j, Y"); ?></div>
-				<a class="button download-button" href="<?php echo get_field('pdf'); ?>">Download the PDF</a>
+				<a class="button download-button downwards" href="<?php echo get_field('pdf'); ?>">Download the PDF</a>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 

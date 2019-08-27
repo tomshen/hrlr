@@ -494,6 +494,7 @@ a {
   padding: 25px 25px 30px 25px;
   display: block;
   text-decoration: none;
+  position: relative;
 }
 .button a {
   text-decoration: none;
@@ -501,6 +502,38 @@ a {
 .button a:hover {
   text-decoration: underline;
 }
+.button:hover {
+  opacity: 0.7;
+}
+.button.forwards::after {
+  content: ".";
+  display: block;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  bottom: 25px;
+  text-indent: -9999px;
+  width: 15px;
+  background: url(/wp-content/themes/hrlr/assets/icons/arrow_forward.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.button.downwards::after {
+  content: ".";
+  display: block;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  bottom: 25px;
+  text-indent: -9999px;
+  width: 15px;
+  background: url(/wp-content/themes/hrlr/assets/icons/arrow_downward.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
 /* Text meant only for screen readers. */
 .screen-reader-text {
   border: 0;
@@ -771,7 +804,6 @@ a {
 }
 .main-navigation .menu-toggle:before {
   content: ".";
-  color: transarent;
   display: block;
   text-indent: -9999px;
   width: 40px;
