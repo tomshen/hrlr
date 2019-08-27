@@ -423,8 +423,8 @@ body {
 
 .text {
   font-family: "Times New Roman", "Times", "serif";
-  font-size: 16px;
-  line-height: 21px;
+  font-size: 18px;
+  line-height: 24px;
   font-weight: 400;
 }
 .text a {
@@ -686,6 +686,16 @@ a {
 }
 .single-hrlr .post-entry-content > *, .single-hrlr_online .post-entry-content > * {
   grid-column: 4/span 10;
+  font-family: "Times New Roman", "Times", "serif";
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.single-hrlr .post-entry-content > * a, .single-hrlr_online .post-entry-content > * a {
+  text-decoration: none;
+}
+.single-hrlr .post-entry-content > * a:hover, .single-hrlr_online .post-entry-content > * a:hover {
+  text-decoration: underline;
 }
 .single-hrlr .post-entry-content h1, .single-hrlr .post-entry-content h2, .single-hrlr .post-entry-content h3, .single-hrlr .post-entry-content h4, .single-hrlr .post-entry-content h5, .single-hrlr .post-entry-content h6, .single-hrlr_online .post-entry-content h1, .single-hrlr_online .post-entry-content h2, .single-hrlr_online .post-entry-content h3, .single-hrlr_online .post-entry-content h4, .single-hrlr_online .post-entry-content h5, .single-hrlr_online .post-entry-content h6 {
   font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
@@ -716,11 +726,15 @@ a {
 .single-hrlr .post-entry-content h2, .single-hrlr .post-entry-content h3, .single-hrlr .post-entry-content h4, .single-hrlr .post-entry-content h5, .single-hrlr .post-entry-content h6, .single-hrlr_online .post-entry-content h2, .single-hrlr_online .post-entry-content h3, .single-hrlr_online .post-entry-content h4, .single-hrlr_online .post-entry-content h5, .single-hrlr_online .post-entry-content h6 {
   font-weight: 400 !important;
 }
+.single-hrlr .post-entry-content sup, .single-hrlr_online .post-entry-content sup {
+  font-size: 100%;
+  top: 0;
+}
 .single-hrlr .post-entry-content sup > a, .single-hrlr_online .post-entry-content sup > a {
   display: inline-block;
-  padding: 8px 1px;
+  padding: 12px 4px;
   background-color: white;
-  border-radius: 3px;
+  border-radius: 8px;
 }
 .single-hrlr .post-entry-content ol:last-of-type, .single-hrlr_online .post-entry-content ol:last-of-type {
   background-color: white;

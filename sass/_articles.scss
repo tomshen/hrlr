@@ -48,7 +48,10 @@
 
     > * {
       grid-column: 4 / span 10;
+        @include text;
     }
+
+
     h1, h2, h3, h4, h5, h6 {
       font-family: $hrlr-online-font;
       font-weight: 400 !important;
@@ -66,12 +69,15 @@
 
 
 
-
+    sup {
+      font-size: 100%;
+      top: 0;
+    }
     sup > a {
       display: inline-block;
-      padding: 8px 1px;
+      padding: 12px 4px;
       background-color: $color-background;
-      border-radius: 3px;
+      border-radius: 8px;
 
     }
 

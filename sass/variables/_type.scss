@@ -77,8 +77,8 @@ $hrlr-online-font: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
 @mixin text {
   @include subtle-link;
   font-family: $text-font;
-  font-size: 16px;
-  line-height: 21px;
+  font-size: 18px;
+  line-height: 24px;
   font-weight: 400;
 }
 
