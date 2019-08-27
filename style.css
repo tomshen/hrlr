@@ -770,10 +770,19 @@ a {
   width: 100%;
 }
 .main-navigation .menu-toggle:before {
-  content: "☰";
+  content: ".";
+  color: transarent;
+  display: block;
+  text-indent: -9999px;
+  width: 40px;
+  height: 40px;
+  background: url(/wp-content/themes/hrlr/assets/icons/menu.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .main-navigation .menu-toggle:hover {
-  background-color: #e8f0fb;
+  opacity: 0.7;
 }
 .main-navigation #main-navigation-menu {
   display: none;
@@ -866,6 +875,11 @@ a {
 }
 .main-navigation.toggled .menu-toggle:before {
   content: "✕";
+  color: transparent;
+  background: url(/wp-content/themes/hrlr/assets/icons/close.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90% 90%;
 }
 .main-navigation.toggled #main-navigation-menu {
   display: flex;

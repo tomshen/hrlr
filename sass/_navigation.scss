@@ -16,11 +16,20 @@ $main-navigation-height: 100vh;
         width: 100%;
 
         &:before {
-            content: '☰';
+          content: '.';
+          color: transarent;
+          display: block;
+          text-indent: -9999px;
+          width: 40px;
+          height: 40px;
+          background: url(/wp-content/themes/hrlr/assets/icons/menu.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
         }
 
         &:hover {
-            background-color: $color-nav-highlight;
+            opacity: .7;
         }
     }
 
@@ -99,6 +108,11 @@ $main-navigation-height: 100vh;
 
             &:before {
                 content: '✕';
+                color: transparent;
+                background: url(/wp-content/themes/hrlr/assets/icons/close.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 90% 90%;
             }
         }
 
