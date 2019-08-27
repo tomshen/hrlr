@@ -30,6 +30,7 @@ $main-navigation-height: 100vh;
         justify-content: space-between;
         padding: 10px;
         position: fixed;
+        min-height: calc(100vh - 20px);
 
         > :last-child {
             font-size: 24px;
@@ -120,6 +121,8 @@ $main-navigation-height: 100vh;
 
         #main-navigation-menu {
           background-color: white;
+
+          display: flex;
         }
     }
 

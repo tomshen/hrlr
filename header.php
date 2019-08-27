@@ -78,10 +78,10 @@
 			<ul class="hrlr-menu">
 				<?php
 					$page_titles = array(
-						"Human Rights Law Review",
-						"HRLR Online",
+						"Human&nbsp;Rights Law&nbsp;Review",
+						"HRL Online",
 						"A Jailhouse Lawyers' Manual",
-						"Trump Human Rights Tracker",
+						"Trump&nbsp;Human Rights&nbsp;Tracker",
 					);
 
 					$page_titles = (object) [
@@ -95,8 +95,7 @@
 				?>
 				<li class="hrlr-menu-item" >
 					<a href="<?php echo $url; ?>">
-						<?php echo $title; ?>
-						<sup><?php echo ($index); ?></sup>
+						<?php echo $title; ?>&nbsp;<sup><?php echo ($index); ?></sup>
 						<?php $index++; ?>
 					</a>
 				</li>
@@ -155,10 +154,10 @@
 	<?php if (is_post_type_archive( ["hrlr", "hrlr_online"] )): ?>
 		<div class="publication-navigation">
 			<div class="publication-navigation-item hrlr-headline-large">
-				<a href="/hrlr/">H. R. L. R.</a>
+				<a href="/hrlr/">H.&nbsp;R.&nbsp;L.&nbsp;R.</a>
 			</div>
 			<div class="publication-navigation-item hrlr-online-headline-large">
-				<a href="/hrlr-online/">HRLR Online</a>
+				<a href="/hrlr-online/">HRLR&nbsp;Online</a>
 			</div>
 		</div>
 	<?php endif; ?>

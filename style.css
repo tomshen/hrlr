@@ -785,6 +785,7 @@ a {
   justify-content: space-between;
   padding: 10px;
   position: fixed;
+  min-height: calc(100vh - 20px);
 }
 .main-navigation #main-navigation-menu > :last-child {
   font-size: 24px;
@@ -888,6 +889,7 @@ a {
   .home .main-navigation #main-navigation-menu,
 .home .main-navigation.toggled #main-navigation-menu {
     background-color: white;
+    display: flex;
   }
 
   #main-navigation-menu .hrlr-menu {
