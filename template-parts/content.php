@@ -45,7 +45,7 @@
 
 	<?php hrlr_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content post-entry-content">
 
 		<?php if ( 'hrlr_online' === get_post_type() or 'hrlr' === get_post_type() ) :	?>
 			<div class="secondary-text author-bio"> <?php echo get_field('author_bio'); ?></div>

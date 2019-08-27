@@ -462,7 +462,7 @@ a {
   grid-column: 1/4;
 }
 
-.site-main, .entry-header, .entry-content, .entry-footer {
+.site-main, .entry-header, .post-entry-content, .entry-footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 20px;
@@ -474,11 +474,11 @@ a {
     grid-column-gap: 15px;
   }
 
-  .site-content, article, .entry-header, .entry-content, .entry-footer {
+  .site-content, article, .entry-header, .post-entry-content, .entry-footer {
     grid-column: 1/span 24;
   }
 
-  .site-main, .entry-header, .entry-content, .entry-footer {
+  .site-main, .entry-header, .post-entry-content, .entry-footer {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 15px;
   }
@@ -635,10 +635,6 @@ a {
   border-top: 1px solid #03001D;
 }
 
-.entry-content ol:last-child {
-  background-color: white;
-}
-
 .single-hrlr .entry-title, .single-hrlr_online .entry-title {
   grid-column-start: 2;
   grid-column-end: span 22;
@@ -652,17 +648,17 @@ a {
 .single-hrlr .hrlr-online-date, .single-hrlr_online .hrlr-online-date {
   grid-column: 6/span 4;
 }
-.single-hrlr .entry-content .author-bio, .single-hrlr_online .entry-content .author-bio {
+.single-hrlr .post-entry-content .author-bio, .single-hrlr_online .post-entry-content .author-bio {
   grid-column: 17/span 7;
 }
-.single-hrlr .entry-content > *, .single-hrlr_online .entry-content > * {
+.single-hrlr .post-entry-content > *, .single-hrlr_online .post-entry-content > * {
   grid-column: 4/span 10;
 }
-.single-hrlr .entry-content h1, .single-hrlr .entry-content h2, .single-hrlr .entry-content h3, .single-hrlr .entry-content h4, .single-hrlr .entry-content h5, .single-hrlr .entry-content h6, .single-hrlr_online .entry-content h1, .single-hrlr_online .entry-content h2, .single-hrlr_online .entry-content h3, .single-hrlr_online .entry-content h4, .single-hrlr_online .entry-content h5, .single-hrlr_online .entry-content h6 {
+.single-hrlr .post-entry-content h1, .single-hrlr .post-entry-content h2, .single-hrlr .post-entry-content h3, .single-hrlr .post-entry-content h4, .single-hrlr .post-entry-content h5, .single-hrlr .post-entry-content h6, .single-hrlr_online .post-entry-content h1, .single-hrlr_online .post-entry-content h2, .single-hrlr_online .post-entry-content h3, .single-hrlr_online .post-entry-content h4, .single-hrlr_online .post-entry-content h5, .single-hrlr_online .post-entry-content h6 {
   font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
   font-weight: 400 !important;
 }
-.single-hrlr .entry-content h1, .single-hrlr_online .entry-content h1 {
+.single-hrlr .post-entry-content h1, .single-hrlr_online .post-entry-content h1 {
   font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
   font-size: 30px;
   letter-spacing: -0.38px;
@@ -671,33 +667,33 @@ a {
   border-top: 1px solid #03001D;
   grid-column: 2/span 22;
 }
-.single-hrlr .entry-content h1 a, .single-hrlr_online .entry-content h1 a {
+.single-hrlr .post-entry-content h1 a, .single-hrlr_online .post-entry-content h1 a {
   text-decoration: none;
 }
-.single-hrlr .entry-content h1 a:hover, .single-hrlr_online .entry-content h1 a:hover {
+.single-hrlr .post-entry-content h1 a:hover, .single-hrlr_online .post-entry-content h1 a:hover {
   text-decoration: underline;
 }
 @media (max-width: 800px) {
-  .single-hrlr .entry-content h1, .single-hrlr_online .entry-content h1 {
+  .single-hrlr .post-entry-content h1, .single-hrlr_online .post-entry-content h1 {
     font-size: 22px;
     letter-spacing: -0.18px;
     line-height: 30px;
   }
 }
-.single-hrlr .entry-content h2, .single-hrlr .entry-content h3, .single-hrlr .entry-content h4, .single-hrlr .entry-content h5, .single-hrlr .entry-content h6, .single-hrlr_online .entry-content h2, .single-hrlr_online .entry-content h3, .single-hrlr_online .entry-content h4, .single-hrlr_online .entry-content h5, .single-hrlr_online .entry-content h6 {
+.single-hrlr .post-entry-content h2, .single-hrlr .post-entry-content h3, .single-hrlr .post-entry-content h4, .single-hrlr .post-entry-content h5, .single-hrlr .post-entry-content h6, .single-hrlr_online .post-entry-content h2, .single-hrlr_online .post-entry-content h3, .single-hrlr_online .post-entry-content h4, .single-hrlr_online .post-entry-content h5, .single-hrlr_online .post-entry-content h6 {
   font-weight: 400 !important;
 }
-.single-hrlr .entry-content sup > a, .single-hrlr_online .entry-content sup > a {
+.single-hrlr .post-entry-content sup > a, .single-hrlr_online .post-entry-content sup > a {
   display: inline-block;
   padding: 8px 1px;
   background-color: white;
   border-radius: 3px;
 }
-.single-hrlr .entry-content ol:last-of-type, .single-hrlr_online .entry-content ol:last-of-type {
+.single-hrlr .post-entry-content ol:last-of-type, .single-hrlr_online .post-entry-content ol:last-of-type {
   background-color: white;
   border-radius: 10px;
 }
-.single-hrlr .entry-content ol:last-of-type::before, .single-hrlr_online .entry-content ol:last-of-type::before {
+.single-hrlr .post-entry-content ol:last-of-type::before, .single-hrlr_online .post-entry-content ol:last-of-type::before {
   content: "Citations";
   font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
   font-size: 30px;
@@ -705,14 +701,14 @@ a {
   line-height: 33px;
   font-weight: 400;
 }
-.single-hrlr .entry-content ol:last-of-type::before a, .single-hrlr_online .entry-content ol:last-of-type::before a {
+.single-hrlr .post-entry-content ol:last-of-type::before a, .single-hrlr_online .post-entry-content ol:last-of-type::before a {
   text-decoration: none;
 }
-.single-hrlr .entry-content ol:last-of-type::before a:hover, .single-hrlr_online .entry-content ol:last-of-type::before a:hover {
+.single-hrlr .post-entry-content ol:last-of-type::before a:hover, .single-hrlr_online .post-entry-content ol:last-of-type::before a:hover {
   text-decoration: underline;
 }
 @media (max-width: 800px) {
-  .single-hrlr .entry-content ol:last-of-type::before, .single-hrlr_online .entry-content ol:last-of-type::before {
+  .single-hrlr .post-entry-content ol:last-of-type::before, .single-hrlr_online .post-entry-content ol:last-of-type::before {
     font-size: 22px;
     letter-spacing: -0.18px;
     line-height: 30px;

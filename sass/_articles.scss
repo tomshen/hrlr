@@ -18,13 +18,8 @@
 .post-navigation {
     grid-column: 2 / span 22;
     div {
-      border-top: 1px solid $color-text;  
+      border-top: 1px solid $color-text;
     }
-}
-
-// Assume that a OL as the last item of the content well is a footnotes div
-.entry-content ol:last-child {
-  background-color: $color-background;
 }
 
 
@@ -46,7 +41,7 @@
     grid-column: 6 / span 4;
   }
 
-  .entry-content {
+  .post-entry-content {
     .author-bio {
         grid-column: 17 / span 7;
     }
