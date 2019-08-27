@@ -682,7 +682,18 @@ a {
   grid-column: 6/span 4;
 }
 .single-hrlr .post-entry-content .author-bio, .single-hrlr_online .post-entry-content .author-bio {
+  font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
+  font-size: 16px;
+  letter-spacing: -0.04;
+  line-height: 24px;
+  font-weight: 400;
   grid-column: 17/span 7;
+}
+.single-hrlr .post-entry-content .author-bio a, .single-hrlr_online .post-entry-content .author-bio a {
+  text-decoration: none;
+}
+.single-hrlr .post-entry-content .author-bio a:hover, .single-hrlr_online .post-entry-content .author-bio a:hover {
+  text-decoration: underline;
 }
 .single-hrlr .post-entry-content > *, .single-hrlr_online .post-entry-content > * {
   grid-column: 4/span 10;

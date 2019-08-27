@@ -43,7 +43,8 @@
 
   .post-entry-content {
     .author-bio {
-        grid-column: 17 / span 7;
+      @include secondary-text;
+      grid-column: 17 / span 7;
     }
 
     > * {
