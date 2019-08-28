@@ -1,11 +1,42 @@
+@mixin button {
+
+    @include secondary-text;
+    background-color: $color-background;
+    border-radius: $border-radius;
+    padding: 25px 25px 30px 25px;
+    display: block;
+    text-decoration: none;
+    position: relative;
+}
+
+@mixin button-icon {
+    content: '.';
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    bottom: 25px;
+    text-indent: -9999px;
+    width: 15px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@mixin button-forwards {
+  background: url(/wp-content/themes/hrlr/assets/icons/arrow_forward.svg);
+  @include button-icon;
+}
+
+@mixin button-downwards {
+  background: url(/wp-content/themes/hrlr/assets/icons/arrow_downward.svg);
+  @include button-icon;
+
+}
+
 .button {
-  @include secondary-text;
-  background-color: $color-background;
-  border-radius: $border-radius;
-  padding: 25px 25px 30px 25px;
-  display: block;
-  text-decoration: none;
-  position: relative ;
+  @include button;
 
   &:hover {
     opacity: .7;
@@ -16,32 +47,10 @@
   }
 
   &.forwards::after {
-      content: '.';
-      display: block;
-      position: absolute;
-      right: 25px;
-      top: 25px;
-      bottom: 25px;
-      text-indent: -9999px;
-      width: 15px;
-      background: url(/wp-content/themes/hrlr/assets/icons/arrow_forward.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
+    @include button-forwards;
   }
 
   &.downwards::after {
-      content: '.';
-      display: block;
-      position: absolute;
-      right: 25px;
-      top: 25px;
-      bottom: 25px;
-      text-indent: -9999px;
-      width: 15px;
-      background: url(/wp-content/themes/hrlr/assets/icons/arrow_downward.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
+    @include button-downwards;
   }
 }

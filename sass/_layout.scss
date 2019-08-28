@@ -1,6 +1,3 @@
-
-$grid-desktop-gap: 15px;
-
 .body {
   display: grid;
   grid-template-columns: $grid-mobile;
@@ -11,7 +8,7 @@ $grid-desktop-gap: 15px;
   grid-column: $grid-mobile-span-full-width;
 }
 
-.site-main, .entry-header, .post-entry-content, .entry-footer {
+.site-main, .entry-header, .post-entry-content, .page .entry-content, .entry-footer {
   display: grid;
   grid-template-columns: $grid-mobile;
   grid-column-gap: $grid-mobile-gap;
@@ -23,11 +20,11 @@ $grid-desktop-gap: 15px;
     grid-column-gap: $grid-desktop-gap;
   }
 
-  .site-content, article, .entry-header, .post-entry-content, .entry-footer {
+  .site-content, article, .entry-header, .post-entry-content, .page .entry-content, .entry-footer {
     grid-column: $grid-desktop-span-full-width;
   }
 
-  .site-main, .entry-header, .post-entry-content, .entry-footer {
+  .site-main, .entry-header, .post-entry-content, .page .entry-content,.entry-footer {
     grid-template-columns: $grid-desktop;
     grid-column-gap: $grid-desktop-gap;
   }
