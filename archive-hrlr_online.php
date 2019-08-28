@@ -39,6 +39,7 @@ get_header();
 
               <div class="post-info secondary-text">
                   <h3 class="hrlr-online-headline-small"> <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></h3>
+									<div class="mobile-meta-info"> <?php echo get_field('author_name'); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo get_the_date("j F Y");?></div>
 									<div> <?php echo the_excerpt(); ?></div>
               </div>
               <?php

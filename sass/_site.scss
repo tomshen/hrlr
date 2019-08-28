@@ -1,8 +1,17 @@
 .site-title {
-    max-width: 300px;
+    max-width: 200px;
 }
 
 #masthead {
-  grid-column-start: 2;
-  grid-column-end: 10;
+  grid-column: 1 / 4;
+}
+
+@media screen and (min-width: $breakpoint-width-mobile) {
+  .site-title {
+      max-width: 300px;
+  }
+
+  #masthead {
+    grid-column: 2 / 10;
+  }
 }
