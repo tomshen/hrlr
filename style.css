@@ -351,7 +351,7 @@ body {
 .hrlr-headline-large a:hover, .type-hrlr .headline-large a:hover {
   text-decoration: underline;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .hrlr-headline-large, .type-hrlr .headline-large {
     font-size: 30px;
     letter-spacing: -0.25px;
@@ -372,7 +372,7 @@ body {
 .hrlr-online-headline-large a:hover, .type-hrlr_online .headline-large a:hover {
   text-decoration: underline;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .hrlr-online-headline-large, .type-hrlr_online .headline-large {
     font-size: 30px;
     letter-spacing: -0.38px;
@@ -393,7 +393,7 @@ body {
 .hrlr-headline-small a:hover, .type-hrlr .headline-small a:hover {
   text-decoration: underline;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .hrlr-headline-small, .type-hrlr .headline-small {
     font-size: 22px;
     line-height: 30px;
@@ -413,7 +413,7 @@ body {
 .hrlr-online-headline-small a:hover, .type-hrlr_online .headline-small a:hover {
   text-decoration: underline;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .hrlr-online-headline-small, .type-hrlr_online .headline-small {
     font-size: 22px;
     letter-spacing: -0.18px;
@@ -468,7 +468,7 @@ a {
   grid-column-gap: 20px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .body {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 15px;
@@ -638,7 +638,7 @@ a {
 .single-hrlr_online .nav-links a:hover {
   text-decoration: underline;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .single-hrlr_online .nav-links {
     font-size: 30px;
     letter-spacing: -0.38px;
@@ -662,7 +662,7 @@ a {
 .single-hrlr .nav-links a:hover {
   text-decoration: underline;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .single-hrlr .nav-links {
     font-size: 30px;
     letter-spacing: -0.25px;
@@ -736,7 +736,7 @@ a {
 .single-hrlr .post-entry-content h1 a:hover, .single-hrlr_online .post-entry-content h1 a:hover {
   text-decoration: underline;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .single-hrlr .post-entry-content h1, .single-hrlr_online .post-entry-content h1 {
     font-size: 22px;
     letter-spacing: -0.18px;
@@ -774,7 +774,7 @@ a {
 .single-hrlr .post-entry-content ol:last-of-type::before a:hover, .single-hrlr_online .post-entry-content ol:last-of-type::before a:hover {
   text-decoration: underline;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .single-hrlr .post-entry-content ol:last-of-type::before, .single-hrlr_online .post-entry-content ol:last-of-type::before {
     font-size: 22px;
     letter-spacing: -0.18px;
@@ -794,7 +794,7 @@ a {
 }
 
 .publication-navigation {
-  grid-column: 10/span 10;
+  grid-column: 12/span 10;
 }
 
 .post-type-archive-hrlr h2 {
@@ -922,7 +922,7 @@ a {
 .main-navigation .hrlr-menu a:hover {
   text-decoration: underline;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .main-navigation .hrlr-menu {
     font-size: 22px;
     letter-spacing: -0.18px;
@@ -995,7 +995,7 @@ a {
   display: flex;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .home .main-navigation,
 .home .main-navigation.toggled {
     background: white;
