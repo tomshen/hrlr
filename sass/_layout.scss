@@ -6,7 +6,7 @@
   padding-right: 20px;
 }
 
-.site-content {
+.site-content, article {
   grid-column: $grid-mobile-span-full-width;
 }
 

@@ -1,10 +1,10 @@
 .page {
   .entry-title {
-    grid-column: 12 / span 11;
+    grid-column: 1 / span 4;
   }
 
   .entry-content > * {
-    grid-column: 12 / span 11;
+    grid-column: 1 / span 4;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -17,6 +17,18 @@
 
     &::after {
       @include button-forwards;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-width-mobile) {
+  .page {
+    .entry-title {
+      grid-column: 12 / span 11;
+    }
+
+    .entry-content > * {
+      grid-column: 12 / span 11;
     }
   }
 }
