@@ -1,5 +1,4 @@
 @mixin button {
-
     @include secondary-text;
     background-color: $color-background;
     border-radius: $border-radius;
