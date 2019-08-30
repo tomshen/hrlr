@@ -721,6 +721,26 @@ a {
   border-top: 1px solid #03001D;
 }
 
+.single-hrlr .abstract-only .post-entry-content::before, .single-hrlr_online .abstract-only .post-entry-content::before {
+  font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
+  font-size: 16px;
+  letter-spacing: -0.04;
+  line-height: 24px;
+  font-weight: 400;
+  content: "Abstract";
+  display: block;
+  border-top: 1px solid #03001D;
+  grid-column: 1/span 4;
+}
+.single-hrlr .abstract-only .post-entry-content::before a, .single-hrlr_online .abstract-only .post-entry-content::before a {
+  text-decoration: none;
+}
+.single-hrlr .abstract-only .post-entry-content::before a:hover, .single-hrlr_online .abstract-only .post-entry-content::before a:hover {
+  text-decoration: underline;
+}
+.single-hrlr .abstract-only .seccondary-download-button, .single-hrlr_online .abstract-only .seccondary-download-button {
+  grid-column: 1/span 4;
+}
 .single-hrlr .entry-title, .single-hrlr_online .entry-title {
   grid-column-start: 1;
   grid-column-end: span 4;
@@ -862,6 +882,26 @@ a {
   }
   .single-hrlr .download-button, .single-hrlr_online .download-button {
     grid-column: 17/span 7;
+  }
+  .single-hrlr .abstract-only .post-entry-content::before, .single-hrlr_online .abstract-only .post-entry-content::before {
+    font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
+    font-size: 16px;
+    letter-spacing: -0.04;
+    line-height: 24px;
+    font-weight: 400;
+    content: "Abstract";
+    display: block;
+    border-top: 1px solid #03001D;
+    grid-column: 2/span 22;
+  }
+  .single-hrlr .abstract-only .post-entry-content::before a, .single-hrlr_online .abstract-only .post-entry-content::before a {
+    text-decoration: none;
+  }
+  .single-hrlr .abstract-only .post-entry-content::before a:hover, .single-hrlr_online .abstract-only .post-entry-content::before a:hover {
+    text-decoration: underline;
+  }
+  .single-hrlr .abstract-only .secondary-download-button, .single-hrlr_online .abstract-only .secondary-download-button {
+    grid-column: 4/span 10;
   }
 }
 .post-type-archive-hrlr {

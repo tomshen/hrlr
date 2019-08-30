@@ -24,6 +24,21 @@
 
 
 .single-hrlr, .single-hrlr_online {
+  .abstract-only {
+    .post-entry-content::before {
+      @include secondary-text;
+      content: "Abstract";
+      display: block;
+      border-top: 1px solid $color-text;
+      grid-column: 1 / span 4;
+    }
+
+    .seccondary-download-button {
+      grid-column: 1 / span 4;
+    }
+  }
+
+
   .entry-title {
     grid-column-start: 1;
     grid-column-end: span 4;
@@ -42,6 +57,7 @@
   }
 
   .post-entry-content {
+
     .author-bio {
       @include secondary-text;
       grid-column: 1 / span 4;
@@ -99,12 +115,14 @@
 }
 
 @media screen and (min-width: $breakpoint-width-mobile) {
+
   .post-navigation {
       grid-column: 2 / span 22;
   }
 
 
   .single-hrlr, .single-hrlr_online {
+
     .entry-title {
       grid-column-start: 2;
       grid-column-end: span 22;
@@ -143,6 +161,20 @@
 
     .download-button {
       grid-column: 17 / span 7;
+    }
+
+    .abstract-only {
+      .post-entry-content::before {
+        @include secondary-text;
+        content: "Abstract";
+        display: block;
+        border-top: 1px solid $color-text;
+        grid-column: 2 / span 22;
+      }
+
+      .secondary-download-button {
+        grid-column: 4 / span 10;
+      }
     }
   }
 }

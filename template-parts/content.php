@@ -9,8 +9,16 @@
 
 ?>
 
+<?php $extraClass = "" ?>
+<?php if ( 'hrlr_online' === get_post_type() or 'hrlr' === get_post_type() ) :
+ 	if(get_field("abstract_only")) :
+		$extraClass = "abstract-only";
+	endif;
+endif; ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+
+<article id="post-<?php the_ID(); ?>" <?php post_class($extraClass); ?>>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -62,7 +70,13 @@
 				)
 			),
 			get_the_title()
-		) );
+		) ); ?>
+
+		<?php if ( 'hrlr_online' === get_post_type() or 'hrlr' === get_post_type() ) :
+		 	if(get_field("abstract_only")) : ?>
+				<a class="button download-button downwards secondary-download-button" href="<?php echo get_field('pdf'); ?>">Download the PDF</a>
+			<?php endif;
+		endif;
 
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'hrlr' ),
