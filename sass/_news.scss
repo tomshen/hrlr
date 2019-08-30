@@ -1,0 +1,48 @@
+
+
+.single-news {
+  .entry-title {
+    @include hrlr-online-headline-small;
+    grid-column: 1 / span 4;
+  }
+
+  .entry-content > *, .news-date {
+    @include secondary-text;
+    grid-column: 1 / span 4;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+  }
+
+  .post-navigation {
+    display: none;
+  }
+}
+
+.news-navigation {
+  grid-column: 1 / span 4;
+}
+
+@media screen and (min-width: $breakpoint-width-mobile) {
+  .single-news {
+    .entry-title {
+      grid-column: 11 / span 12;
+    }
+
+    .entry-content > *, .news-date {
+      grid-column: 11 / span 12;
+    }
+  }
+
+  .post-type-archive-news {
+    .site-content {
+      grid-column: 11 / span 12;
+    }
+  }
+
+
+  .news-navigation {
+    grid-column: 11 / span 4;
+  }
+}

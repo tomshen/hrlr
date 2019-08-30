@@ -48,6 +48,11 @@ endif; ?>
 				</div>
 				<div class="hrlr-online-headline-small hrlr-online-date"> <?php echo the_date("F j, Y"); ?></div>
 				<a class="button download-button downwards" href="<?php echo get_field('pdf'); ?>">Download the PDF</a>
+		<?php endif;
+
+		if ( 'news' === get_post_type() ) :
+			?>
+				<div class="secondary-text news-date"> <?php echo the_date("F j, Y"); ?></div>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 

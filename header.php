@@ -77,18 +77,11 @@
 		<div id="main-navigation-menu">
 			<ul class="hrlr-menu">
 				<?php
-					$page_titles = array(
-						"Human&nbsp;Rights Law&nbsp;Review",
-						"HRL Online",
-						"A Jailhouse Lawyers' Manual",
-						"Trump&nbsp;Human Rights&nbsp;Tracker",
-					);
-
 					$page_titles = (object) [
-						"Human Rights Law Review" => '/hrlr',
+						"Human&nbsp;Rights Law&nbsp;Review" => '/hrlr',
 						"HRLR Online" => "/hrlr-online",
-						"A Jailhouse Lawyers' Manual" => "http://jlm.law.columbia.edu",
-						"Trump Human Rights Tracker" => "https://trumphumanrightstracker.law.columbia.edu",
+						"A&nbspJailhouse Lawyers'&nbspManual" => "http://jlm.law.columbia.edu",
+						"Trump&nbspHuman Rights&nbspTracker" => "https://trumphumanrightstracker.law.columbia.edu",
 					];
 					$index = 1;
 					foreach ($page_titles as $title=>$url):
@@ -117,15 +110,16 @@
 			</ul>
 			<ul class="hrlr-menu">
 				<?php
-					$page_titles = array(
-						"About",
-						"Submissions",
-						"News",
-					);
-					foreach ($page_titles as $title):
+
+					$page_titles = (object) [
+						"About" => '/about',
+						"Submissions" => "/submissions",
+						"News" => "/news",
+					];
+					foreach ($page_titles as $title=>$url):
 				?>
 				<li class="hrlr-menu-item" >
-					<a href="<?php echo get_permalink(get_page_by_title($title)); ?>">
+					<a href="<?php echo $url; ?>">
 						<?php echo $title; ?>
 					</a>
 				</li>
@@ -146,16 +140,22 @@
 			</div><!-- .site-branding -->
 		</header><!-- #masthead -->
 
-	<?php if (is_post_type_archive( ["hrlr", "hrlr_online"] )): ?>
-		<div class="publication-navigation">
-			<div class="publication-navigation-item hrlr-headline-large">
-				<a href="/hrlr/">H.&nbsp;R.&nbsp;L.&nbsp;R.</a>
-			</div>
-			<div class="publication-navigation-item hrlr-online-headline-large">
-				<a href="/hrlr-online/">HRLR&nbsp;Online</a>
-			</div>
-		</div>
-	<?php endif; ?>
+			<?php if (is_post_type_archive( ["hrlr", "hrlr_online"] )): ?>
+				<div class="publication-navigation">
+					<div class="publication-navigation-item hrlr-headline-large">
+						<a href="/hrlr/">H.&nbsp;R.&nbsp;L.&nbsp;R.</a>
+					</div>
+					<div class="publication-navigation-item hrlr-online-headline-large">
+						<a href="/hrlr-online/">HRLR&nbsp;Online</a>
+					</div>
+				</div>
+			<?php endif; ?>
+
+			<?php if (is_singular("news")): ?>
+				<div class="news-navigation hrlr-online-headline-large">
+					<a href="/news/">News ⤴</a>
+				</div>
+			<?php endif; ?>
 
 
 
