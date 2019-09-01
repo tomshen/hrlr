@@ -19,13 +19,13 @@ $hrlr-online-font: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
   @include subtle-link;
   font-family: $hrlr-font;
   font-size: 54px;
-  letter-spacing: -0.45px;
+  letter-spacing: -0.25px;
   line-height: 54px;
   font-weight: 400;
 
   @media (max-width: $breakpoint-width-mobile) {
     font-size: 30px;
-    letter-spacing: -0.25px;
+    letter-spacing: -0.15px;
     line-height: 33px;
   }
 }
@@ -49,13 +49,14 @@ $hrlr-online-font: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
   @include subtle-link;
   font-family: $hrlr-font;
   font-size: 30px;
-  letter-spacing: -0.25px;
+  letter-spacing: -0.2px;
   line-height: 33px;
   font-weight: 400;
 
   @media (max-width: $breakpoint-width-mobile) {
     font-size: 22px;
     line-height: 30px;
+    letter-spacing: -0.1px;
   }
 }
 

@@ -341,7 +341,7 @@ body {
 .hrlr-headline-large, .type-hrlr .headline-large {
   font-family: "Burgess", "Garamond", "Times New Roman", "Times", "serif";
   font-size: 54px;
-  letter-spacing: -0.45px;
+  letter-spacing: -0.25px;
   line-height: 54px;
   font-weight: 400;
 }
@@ -354,7 +354,7 @@ body {
 @media (max-width: 1000px) {
   .hrlr-headline-large, .type-hrlr .headline-large {
     font-size: 30px;
-    letter-spacing: -0.25px;
+    letter-spacing: -0.15px;
     line-height: 33px;
   }
 }
@@ -383,7 +383,7 @@ body {
 .hrlr-headline-small, .type-hrlr .headline-small {
   font-family: "Burgess", "Garamond", "Times New Roman", "Times", "serif";
   font-size: 30px;
-  letter-spacing: -0.25px;
+  letter-spacing: -0.2px;
   line-height: 33px;
   font-weight: 400;
 }
@@ -397,6 +397,7 @@ body {
   .hrlr-headline-small, .type-hrlr .headline-small {
     font-size: 22px;
     line-height: 30px;
+    letter-spacing: -0.1px;
   }
 }
 
@@ -752,7 +753,7 @@ h1, h2, h3, h4, h5, h6 {
 .single-hrlr .nav-links {
   font-family: "Burgess", "Garamond", "Times New Roman", "Times", "serif";
   font-size: 54px;
-  letter-spacing: -0.45px;
+  letter-spacing: -0.25px;
   line-height: 54px;
   font-weight: 400;
 }
@@ -765,7 +766,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 1000px) {
   .single-hrlr .nav-links {
     font-size: 30px;
-    letter-spacing: -0.25px;
+    letter-spacing: -0.15px;
     line-height: 33px;
   }
 }
@@ -988,7 +989,7 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 1px solid #03001D;
   font-family: "Burgess", "Garamond", "Times New Roman", "Times", "serif";
   font-size: 54px;
-  letter-spacing: -0.45px;
+  letter-spacing: -0.25px;
   line-height: 54px;
   font-weight: 400;
 }
@@ -1001,7 +1002,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 1000px) {
   .post-type-archive-hrlr h3 {
     font-size: 30px;
-    letter-spacing: -0.25px;
+    letter-spacing: -0.15px;
     line-height: 33px;
   }
 }
@@ -1028,7 +1029,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: -3em;
     font-family: "Burgess", "Garamond", "Times New Roman", "Times", "serif";
     font-size: 30px;
-    letter-spacing: -0.25px;
+    letter-spacing: -0.2px;
     line-height: 33px;
     font-weight: 400;
   }
@@ -1043,6 +1044,7 @@ h1, h2, h3, h4, h5, h6 {
   .post-type-archive-hrlr h3 {
     font-size: 22px;
     line-height: 30px;
+    letter-spacing: -0.1px;
   }
 }
 @media screen and (min-width: 1000px) {
