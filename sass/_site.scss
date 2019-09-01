@@ -4,6 +4,7 @@
 
 #masthead {
   grid-column: 1 / 4;
+  margin-top: 20px;
 }
 
 @media screen and (min-width: $breakpoint-width-mobile) {
@@ -13,5 +14,11 @@
 
   #masthead {
     grid-column: 2 / 10;
+    margin-top: 30px;
   }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
 }

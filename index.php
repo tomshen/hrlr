@@ -34,7 +34,7 @@ get_header();
 				) );
 
 				$volume = $volumes[0] ?>
-				<h2 class="hrlr-headline-large"> Vol. <?php echo $volume->slug ?> <?php echo get_field('start_year', $volume) ?>-<?php echo substr(strval(get_field('start_year', $volume)+1), -2) ?></h2>
+				<h2 class="hrlr-headline-large hrlr-post-title"> Vol. <?php echo $volume->slug ?> <span class="hrlr-post-year">(<?php echo get_field('start_year', $volume) ?>-<?php echo substr(strval(get_field('start_year', $volume)+1), -2) ?>) </span></h2>
 				<?php foreach ($issues as $issue) { ?>
 						<?php
 						$args = [
@@ -56,11 +56,11 @@ get_header();
 						];
 						$loop = new WP_Query($args);
 						if($loop->have_posts()) { ?>
-							<h3 class="hrlr-headline-small"> No. <?php echo get_field('issue_number', $issue) ?> <?php echo get_field('season', $issue) ?>
+							<h3 class="hrlr-headline-small"> No. <?php echo get_field('issue_number', $issue) ?> <span class="hrlr-post-volume-number"><?php echo get_field('season', $issue) ?>
 							<?php $issue_year =  get_field('start_year', $volume);
 										if (get_field('issue_number', $issue) == 3) $issue_year++;
 										echo $issue_year;
-										?>
+										?></span>
 						 </h3>
 
 							<?php while ($loop->have_posts()) {

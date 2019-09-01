@@ -20,21 +20,56 @@
     h2 {
       border-bottom: 1px solid $color-text;
       grid-column: 1 / span 4;
+      margin-bottom: 0px;
+      padding-bottom: 5px;
     }
 
     .homepage-entry-content {
       grid-column: 1 / span 4;
       border-bottom: 1px solid $color-text;
+      padding: 11px 0px 25px 0px;
+
+      h4 {
+        margin-bottom: 8px;
+      }
     }
 
     h3 {
       grid-column: 1 / span 4;
       border-bottom: 1px solid $color-text;
-      border-top: 1px solid $color-text;
+      position: relative;
+      padding: 15px 25px 10px 25px;
+    }
+
+    .hrlr-post-title {
+      margin-top: 90px;
+    }
+
+    .hrlr-post-title::before {
+      content: ".";
+      display: inline-block;
+      width: 17px;
+      height: 1em;
+      background-color: $color-text;
+    }
+
+    .hrlr-post-volume-number {
+      position: absolute;
+      right: 25px;
+    }
+
+    .hrlr-post-year {
+      display: none;
     }
 
     .button {
       grid-column: 1 / span 4;
+      margin: 40px 0px;
+    }
+
+    .online-posts-header-volume {
+      margin-top: 40px;
+
     }
 }
 
@@ -55,16 +90,42 @@
       h2 {
         border-bottom: 1px solid $color-text;
         grid-column: 2 / span 16;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .hrlr-post-title {
+        margin-top: 130px
       }
 
       .homepage-entry-content {
         grid-column: 8 / span 10;
         border-bottom: 1px solid $color-text;
+        padding: 20px 0 35px 0;
       }
 
       h3 {
         border: none;
         grid-column: 2 / span 6;
+        padding: 20px 0 0 0;
+      }
+
+      .hrlr-post-title::before {
+        content: ".";
+        display: inline-block;
+        width: 27px;
+        height: 1em;
+        background-color: $color-text;
+      }
+
+      .hrlr-post-volume-number {
+        display: none;
+      }
+
+      .hrlr-post-year {
+        display: inline;
+        position: absolute;
+        right: 0;
       }
 
       .button {
