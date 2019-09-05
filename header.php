@@ -142,10 +142,10 @@
 
 			<?php if (is_post_type_archive( ["hrlr", "hrlr_online"] )): ?>
 				<div class="publication-navigation">
-					<div class="publication-navigation-item hrlr-headline-large">
+					<div class="publication-navigation-item hrlr-headline-large <?php if (is_post_type_archive( ["hrlr"] )) { echo "is-selected"; }?>">
 						<a href="/hrlr/">H.&nbsp;R.&nbsp;L.&nbsp;R.</a>
 					</div>
-					<div class="publication-navigation-item hrlr-online-headline-large">
+					<div class="publication-navigation-item hrlr-online-headline-large <?php if (is_post_type_archive( ["hrlr_online"] )) { echo "is-selected"; }?>">
 						<a href="/hrlr-online/">HRLR&nbsp;Online</a>
 					</div>
 				</div>

@@ -28,7 +28,7 @@ get_header();
           ];
           $loop = new WP_Query($args);
 					if($loop->have_posts()) { ?>
-		         <h2 class="hrlr-online-headline-large"> <?php echo $months_names[$month-1] ?> <?php echo $year ?> </h2>
+		         <h2 class="hrlr-online-headline-large"> <?php echo $months_names[$month-1] ?> <span class="hrlr-online-post-year"><?php echo $year ?></span> </h2>
 					<?php }
           while ($loop->have_posts()) {
               $loop->the_post(); ?>

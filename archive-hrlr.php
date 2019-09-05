@@ -28,7 +28,7 @@ get_header();
 
       foreach ($volumes as $volume) {
         ?>
-        <h2 class="hrlr-headline-large"> Vol. <?php echo $volume->slug ?> <?php echo get_field('start_year', $volume) ?>-<?php echo substr(strval(get_field('start_year', $volume)+1), -2) ?></h2>
+        <h2 class="hrlr-headline-large"> Vol. <?php echo $volume->slug ?> <span class="hrlr-post-year">(<?php echo get_field('start_year', $volume) ?>-<?php echo substr(strval(get_field('start_year', $volume)+1), -2) ?>)</span></h2>
         <?php foreach ($issues as $issue) { ?>
           <h3 class="hrlr-headline-small"> No. <?php echo get_field('issue_number', $issue) ?> <?php echo get_field('season', $issue) ?>
 
