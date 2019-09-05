@@ -20,6 +20,8 @@
     div {
       border-top: 1px solid $color-text;
     }
+
+    display: none;
 }
 
 
@@ -42,6 +44,8 @@
   .entry-title {
     grid-column-start: 1;
     grid-column-end: span 4;
+    margin-top: 50px;
+    margin-bottom: 5px;
   }
 
   .entry-meta {
@@ -50,10 +54,12 @@
 
   .hrlr-issue-number, .hrlr-online-issue {
     grid-column: 1 / span 4;
+    margin-top: 20px;
+    margin-bottom: 30px;
   }
 
   .hrlr-online-date {
-    grid-column: 1 / span 4;
+    margin-left: 20px;
   }
 
   .post-entry-content {
@@ -99,11 +105,14 @@
     }
 
     ol:last-of-type {
+      @include secondary-text;
       background-color: $color-background;
       border-radius: $border-radius;
+      padding: 30px 30px 30px 60px;
 
       &::before {
         content: "Citations";
+        margin-left: -30px;
         @include hrlr-online-headline-small;
       }
     }
@@ -111,6 +120,14 @@
 
   .download-button {
     grid-column: 1 / span 4;
+    padding: 20px 20px;
+
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .secondary-download-button {
+    @include secondary-text;
   }
 }
 
@@ -126,6 +143,8 @@
     .entry-title {
       grid-column-start: 2;
       grid-column-end: span 22;
+      margin-top: 100px;
+      margin-bottom: 30px;
     }
 
     .entry-meta {
@@ -133,11 +152,14 @@
     }
 
     .hrlr-issue-number, .hrlr-online-issue {
-      grid-column: 2 / span 4;
+      grid-column: 2 / span 10;
+
+      margin-top: 30px;
+      margin-bottom: 50px;
     }
 
     .hrlr-online-date {
-      grid-column: 6 / span 4;
+      margin-left: 30px;
     }
 
     .post-entry-content {
@@ -146,7 +168,7 @@
         height: 0px;
         margin: 0px;
         position: relative;
-        top: 60px;
+        top: 120px;
       }
 
       > * {
@@ -155,6 +177,12 @@
 
 
       h1 {
+        grid-column: 2 / span 22;
+        padding-top: 30px;
+        padding-bottom: 20px;
+      }
+
+      ol:last-of-type {
         grid-column: 2 / span 22;
       }
     }
@@ -170,10 +198,18 @@
         display: block;
         border-top: 1px solid $color-text;
         grid-column: 2 / span 22;
+        padding-top: 30px;
+        margin-bottom: -12px;
+        height: 0;
       }
 
       .secondary-download-button {
         grid-column: 4 / span 10;
+
+      }
+
+      .author-bio {
+        top: 0px;
       }
     }
   }

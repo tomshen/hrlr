@@ -773,6 +773,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .post-navigation {
   grid-column: 1/span 4;
+  display: none;
 }
 .post-navigation div {
   border-top: 1px solid #03001D;
@@ -801,15 +802,19 @@ h1, h2, h3, h4, h5, h6 {
 .single-hrlr .entry-title, .single-hrlr_online .entry-title {
   grid-column-start: 1;
   grid-column-end: span 4;
+  margin-top: 50px;
+  margin-bottom: 5px;
 }
 .single-hrlr .entry-meta, .single-hrlr_online .entry-meta {
   grid-column: 1/span 4;
 }
 .single-hrlr .hrlr-issue-number, .single-hrlr .hrlr-online-issue, .single-hrlr_online .hrlr-issue-number, .single-hrlr_online .hrlr-online-issue {
   grid-column: 1/span 4;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 .single-hrlr .hrlr-online-date, .single-hrlr_online .hrlr-online-date {
-  grid-column: 1/span 4;
+  margin-left: 20px;
 }
 .single-hrlr .post-entry-content .author-bio, .single-hrlr_online .post-entry-content .author-bio {
   font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
@@ -878,11 +883,24 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 8px;
 }
 .single-hrlr .post-entry-content ol:last-of-type, .single-hrlr_online .post-entry-content ol:last-of-type {
+  font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
+  font-size: 16px;
+  letter-spacing: -0.04;
+  line-height: 24px;
+  font-weight: 400;
   background-color: white;
   border-radius: 10px;
+  padding: 30px 30px 30px 60px;
+}
+.single-hrlr .post-entry-content ol:last-of-type a, .single-hrlr_online .post-entry-content ol:last-of-type a {
+  text-decoration: none;
+}
+.single-hrlr .post-entry-content ol:last-of-type a:hover, .single-hrlr_online .post-entry-content ol:last-of-type a:hover {
+  text-decoration: underline;
 }
 .single-hrlr .post-entry-content ol:last-of-type::before, .single-hrlr_online .post-entry-content ol:last-of-type::before {
   content: "Citations";
+  margin-left: -30px;
   font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
   font-size: 30px;
   letter-spacing: -0.38px;
@@ -904,6 +922,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 .single-hrlr .download-button, .single-hrlr_online .download-button {
   grid-column: 1/span 4;
+  padding: 20px 20px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.single-hrlr .secondary-download-button, .single-hrlr_online .secondary-download-button {
+  font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
+  font-size: 16px;
+  letter-spacing: -0.04;
+  line-height: 24px;
+  font-weight: 400;
+}
+.single-hrlr .secondary-download-button a, .single-hrlr_online .secondary-download-button a {
+  text-decoration: none;
+}
+.single-hrlr .secondary-download-button a:hover, .single-hrlr_online .secondary-download-button a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 1000px) {
@@ -914,27 +948,36 @@ h1, h2, h3, h4, h5, h6 {
   .single-hrlr .entry-title, .single-hrlr_online .entry-title {
     grid-column-start: 2;
     grid-column-end: span 22;
+    margin-top: 100px;
+    margin-bottom: 30px;
   }
   .single-hrlr .entry-meta, .single-hrlr_online .entry-meta {
     grid-column: 2/span 22;
   }
   .single-hrlr .hrlr-issue-number, .single-hrlr .hrlr-online-issue, .single-hrlr_online .hrlr-issue-number, .single-hrlr_online .hrlr-online-issue {
-    grid-column: 2/span 4;
+    grid-column: 2/span 10;
+    margin-top: 30px;
+    margin-bottom: 50px;
   }
   .single-hrlr .hrlr-online-date, .single-hrlr_online .hrlr-online-date {
-    grid-column: 6/span 4;
+    margin-left: 30px;
   }
   .single-hrlr .post-entry-content .author-bio, .single-hrlr_online .post-entry-content .author-bio {
     grid-column: 17/span 7;
     height: 0px;
     margin: 0px;
     position: relative;
-    top: 60px;
+    top: 120px;
   }
   .single-hrlr .post-entry-content > *, .single-hrlr_online .post-entry-content > * {
     grid-column: 4/span 10;
   }
   .single-hrlr .post-entry-content h1, .single-hrlr_online .post-entry-content h1 {
+    grid-column: 2/span 22;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  .single-hrlr .post-entry-content ol:last-of-type, .single-hrlr_online .post-entry-content ol:last-of-type {
     grid-column: 2/span 22;
   }
   .single-hrlr .download-button, .single-hrlr_online .download-button {
@@ -950,6 +993,9 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     border-top: 1px solid #03001D;
     grid-column: 2/span 22;
+    padding-top: 30px;
+    margin-bottom: -12px;
+    height: 0;
   }
   .single-hrlr .abstract-only .post-entry-content::before a, .single-hrlr_online .abstract-only .post-entry-content::before a {
     text-decoration: none;
@@ -959,6 +1005,9 @@ h1, h2, h3, h4, h5, h6 {
   }
   .single-hrlr .abstract-only .secondary-download-button, .single-hrlr_online .abstract-only .secondary-download-button {
     grid-column: 4/span 10;
+  }
+  .single-hrlr .abstract-only .author-bio, .single-hrlr_online .abstract-only .author-bio {
+    top: 0px;
   }
 }
 .post-type-archive-hrlr {

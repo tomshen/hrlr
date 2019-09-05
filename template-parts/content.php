@@ -45,8 +45,9 @@ endif; ?>
 			?>
 				<div class="hrlr-online-headline-small hrlr-online-issue">
 					HRLR Online
+          <span class="hrlr-online-headline-small hrlr-online-date"> <?php echo the_date("F j, Y"); ?></span>
 				</div>
-				<div class="hrlr-online-headline-small hrlr-online-date"> <?php echo the_date("F j, Y"); ?></div>
+
 				<a class="button download-button downwards" href="<?php echo get_field('pdf'); ?>">Download the PDF</a>
 		<?php endif;
 
@@ -82,15 +83,7 @@ endif; ?>
 				<a class="button download-button downwards secondary-download-button" href="<?php echo get_field('pdf'); ?>">Download the PDF</a>
 			<?php endif;
 		endif;
-
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'hrlr' ),
-			'after'  => '</div>',
-		) );
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php hrlr_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
