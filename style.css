@@ -1245,6 +1245,11 @@ h1, h2, h3, h4, h5, h6 {
   .page .entry-content > * {
     grid-column: 12/span 11;
   }
+  .page h1:first-child {
+    position: relative;
+    top: -1em;
+    height: 0;
+  }
 }
 .single-news .entry-title {
   font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";

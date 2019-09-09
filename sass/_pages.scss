@@ -11,6 +11,7 @@
     font-weight: 400;
   }
 
+
   .entry-content a:first-child:last-child {
     @include button;
     background-color: $color-background-hrlr;
@@ -30,5 +31,12 @@
     .entry-content > * {
       grid-column: 12 / span 11;
     }
+
+
+      h1:first-child{
+        position: relative;
+        top: -1em;
+        height: 0;
+      }
   }
 }
