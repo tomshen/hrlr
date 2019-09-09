@@ -1347,8 +1347,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   justify-content: space-between;
   padding: 10px;
-  position: fixed;
-  min-height: calc(100vh - 20px);
+  min-height: calc(100vh - 20px - 65px);
 }
 .main-navigation #main-navigation-menu > :last-child {
   font-size: 24px;
@@ -1417,6 +1416,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #03001D;
   font-size: 12px;
   margin-top: 10px;
+  line-height: 16px;
 }
 .main-navigation .hrlr-menu + .hrlr-menu {
   margin-top: 20px;
@@ -1457,6 +1457,7 @@ h1, h2, h3, h4, h5, h6 {
   .home .main-navigation #main-navigation-menu,
 .home .main-navigation.toggled #main-navigation-menu {
     background-color: white;
+    min-height: calc(100vh - 20px);
     display: flex;
   }
 
