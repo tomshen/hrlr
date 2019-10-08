@@ -1202,6 +1202,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .page h1, .page h2, .page h3, .page h4, .page h5, .page h6 {
   font-weight: 400;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
 }
 .page .entry-content a:first-child:last-child {
   font-family: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
@@ -1246,9 +1248,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: 12/span 11;
   }
   .page h1:first-child {
-    position: relative;
-    top: -1em;
-    height: 0;
+    margin-top: -0.8em;
   }
 }
 .single-news .entry-title {
