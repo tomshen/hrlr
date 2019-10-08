@@ -70,6 +70,12 @@ get_header();
         }
       } ?>
 
+			<div class="back-issues-note hrlr-headline-small">
+				For inquiries into backdated issues, <a href="/about">reach out to us</a>. Archived issues are always available through LexisNexis and Westlaw.
+			</div>
+
+			</div>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

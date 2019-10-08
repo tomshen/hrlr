@@ -1055,8 +1055,12 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   right: 0;
 }
-.post-type-archive-hrlr .entry-content, .post-type-archive-hrlr_online .entry-content {
+.post-type-archive-hrlr .entry-content, .post-type-archive-hrlr .back-issues-note, .post-type-archive-hrlr_online .entry-content, .post-type-archive-hrlr_online .back-issues-note {
   grid-column: 1/span 4;
+}
+.post-type-archive-hrlr .back-issues-note, .post-type-archive-hrlr_online .back-issues-note {
+  margin-top: 3em;
+  margin-bottom: 1em;
 }
 
 .post-type-archive-hrlr h2 {
@@ -1176,6 +1180,13 @@ h1, h2, h3, h4, h5, h6 {
   }
   .post-type-archive-hrlr .entry-content h4 {
     margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .post-type-archive-hrlr .back-issues-note {
+    grid-column: 12/span 12;
+    margin-top: 4em;
+    margin-bottom: 4em;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -1300,9 +1311,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .news-navigation {
   margin-top: 1em;
-}
-
-.news-navigation {
   grid-column: 1/span 4;
 }
 

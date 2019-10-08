@@ -52,8 +52,13 @@
     }
   }
 
-  .entry-content {
+  .entry-content, .back-issues-note {
     grid-column: 1 / span 4;
+  }
+
+  .back-issues-note {
+    margin-top: 3em;
+    margin-bottom: 1em;
   }
 }
 
@@ -160,6 +165,13 @@
       h4 {
         margin-bottom: 10px;
       }
+    }
+
+
+    .back-issues-note {
+      grid-column: 12 / span 12;
+      margin-top: 4em;
+      margin-bottom: 4em;
     }
   }
 
