@@ -155,7 +155,7 @@
 
 			<?php if (is_singular("news")): ?>
 				<div class="news-navigation hrlr-online-headline-large">
-					<a href="/news/">News ⤴</a>
+					<a href="/news/">News &#10548;&#xFE0E;</a>
 				</div>
 			<?php endif; ?>
 
