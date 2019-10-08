@@ -87,3 +87,62 @@ endif; ?>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->
+
+
+<?php if ( 'hrlr_online' === get_post_type() and get_field("abstract_only") ) : ?>
+  <div class="post-recirc hrlr-online-post-recirc">
+
+          <?php
+          $args = [
+              'post_type' => 'hrlr_online',
+              'posts_per_page' => '3',
+          ];
+          $loop = new WP_Query($args);
+					if($loop->have_posts()) { ?>
+		         <h2 class="hrlr-online-headline-large"> More HRLR Online</h2>
+					<?php }
+          while ($loop->have_posts()) {
+              $loop->the_post(); ?>
+              <div class="meta-info secondary-text">
+                  <div> <?php echo get_field('author_name'); ?></div>
+									<div> <?php echo the_date("j F Y"); ?></div>
+              </div>
+
+              <div class="post-info secondary-text">
+                  <h3 class="hrlr-online-headline-small"> <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></h3>
+									<div class="mobile-meta-info"> <?php echo get_field('author_name'); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo get_the_date("j F Y");?></div>
+									<div> <?php echo the_excerpt(); ?></div>
+              </div>
+              <?php
+          }
+          wp_reset_postdata();
+      ?>
+
+  </div>
+<?php endif; ?>
+
+
+<?php if ( 'hrlr' === get_post_type() and get_field("abstract_only") ) : ?>
+  <div class="post-recirc hrlr-post-recirc">
+
+      <h2 class="hrlr-headline-large"> More H. R. L. R.</h2>
+        <?php
+        $args = [
+            'post_type' => 'hrlr',
+            'posts_per_page' => '3',
+        ];
+        $loop = new WP_Query($args);
+        while ($loop->have_posts()) {
+            $loop->the_post();
+            ?>
+            <div class="entry-content">
+                <h4 class="hrlr-headline-small"> <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></h4>
+                <div class="secondary-text"> <?php echo get_field('author_name'); ?></div>
+            </div>
+            <?php
+        }
+
+        wp_reset_postdata();
+        ?>
+  </div>
+<?php endif; ?>
