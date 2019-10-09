@@ -32,16 +32,19 @@ get_header();
 					<?php }
           while ($loop->have_posts()) {
               $loop->the_post(); ?>
-              <div class="meta-info secondary-text">
+							<div class="entry-content">
+								<div class="meta-info secondary-text">
                   <div> <?php echo get_field('author_name'); ?></div>
 									<div> <?php echo the_date("j F Y"); ?></div>
-              </div>
+              	</div>
 
-              <div class="post-info secondary-text">
+              	<div class="post-info secondary-text">
                   <h3 class="hrlr-online-headline-small"> <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></h3>
 									<div class="mobile-meta-info"> <?php echo get_field('author_name'); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo get_the_date("j F Y");?></div>
 									<div> <?php echo the_excerpt(); ?></div>
-              </div>
+              	</div>
+							</div>
+
               <?php
           }
           wp_reset_postdata();

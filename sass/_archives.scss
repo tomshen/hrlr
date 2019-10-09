@@ -12,28 +12,14 @@
   border-top: 1px solid $color-text;
   border-bottom: 1px solid $color-text;
   margin-top: 70px;
-  margin-bottom: 70px;
 
   .publication-navigation-item {
     opacity: 0.3;
     display: inline-block;
     margin-right: 20px;
 
-    &::before {
-      content: "• ";
-      font-family: $hrlr-online-font;
-      color: transparent;
-      -webkit-text-stroke: 2px black;
-    }
-
     &.is-selected {
       opacity: 1;
-    }
-
-    &.is-selected::before {
-      content: "• ";
-      font-family: $hrlr-online-font;
-      color: $color-text;
     }
 
   }
@@ -66,6 +52,7 @@
 
   h2 {
     padding-bottom: 10px;
+    margin-top: 3em;
 
     &::before {
       content: ".";
@@ -78,26 +65,47 @@
 
 
   h3 {
-    grid-column: 1 / span 4;
-    border-top: 1px solid $color-text;
-    @include hrlr-headline-large;
-    margin: 5px 0px;
-  }
+      grid-column: 1 / span 4;
+      border-bottom: 1px solid $color-text;
+      border-top: 1px solid $color-text;
+      position: relative;
+      padding: 15px 25px 10px 25px;
+    }
 
-  h2 + h3, h2 + .entry-content {
+    .hrlr-post-volume-number {
+      position: absolute;
+      right: 25px;
+    }
+
+
+  h2 + h3, h2 + .entry-content, h3 + .entry-content {
     border-top: none;
   }
 
   .entry-content {
     border-top: 1px solid $color-text;
+    padding-top: 1em;
+    margin-bottom: 1em;
+  }
 
-    h4 {
-      margin-bottom: 10px;
-    }
+  h4 {
+    margin-bottom: 0.5em;
   }
 }
 
 .post-type-archive-hrlr_online, .hrlr-online-post-recirc {
+
+  .entry-content {
+    border-top: 1px solid $color-text;
+    grid-column: 1 / span 4;
+    margin-bottom: 1em;
+    padding-top: 1em;
+  }
+
+  h2 + .entry-content {
+      border-top: none;
+      padding-top: 0;
+  }
 
   h2 {
     padding-bottom: 20px;
@@ -109,7 +117,7 @@
     grid-column: 1 / span 4;
     margin: 5px 0px;
   }
-  
+
   .meta-info {
     display: none;
   }
@@ -127,6 +135,21 @@
     border-top: none;
     border-bottom: none;
     margin-top: 30px;
+
+    .publication-navigation-item {
+      &::before {
+        content: "• ";
+        font-family: $hrlr-online-font;
+        color: transparent;
+        -webkit-text-stroke: 2px black;
+      }
+
+      &.is-selected::before {
+        content: "• ";
+        font-family: $hrlr-online-font;
+        color: $color-text;
+      }
+    }
   }
 
   .post-type-archive-hrlr, .hrlr-post-recirc {
@@ -146,8 +169,14 @@
     h3 {
       grid-column: 2 / span 22;
       height: 0px;
+      padding: 0;
       padding-top: 20px;
       @include hrlr-headline-small;
+      border-bottom: none;
+      .hrlr-post-volume-number {
+        position: static;
+        display: block;
+      }
     }
 
     h3 + .entry-content {
@@ -179,8 +208,17 @@
       margin: 100px 0 20px 0;
     }
 
+    .entry-content {
+      grid-column: 2 / span 22;
+      margin-bottom: 1em;
+      padding-top: 1em;
+      display: grid;
+      grid-template-columns: $grid-desktop;
+      grid-column-gap: $grid-desktop-gap;
+    }
+
     .meta-info {
-      grid-column: 2 / span 10;
+      grid-column: 1 / span 10;
       display: block;
     }
 
@@ -188,7 +226,7 @@
       display: none;
     }
     .post-info {
-      grid-column: 12 / span 12;
+      grid-column: 12 / span 10;
     }
   }
 }

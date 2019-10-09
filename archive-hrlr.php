@@ -30,13 +30,12 @@ get_header();
         ?>
         <h2 class="hrlr-headline-large"> Vol. <?php echo $volume->slug ?> <span class="hrlr-post-year">(<?php echo get_field('start_year', $volume) ?>-<?php echo substr(strval(get_field('start_year', $volume)+1), -2) ?>)</span></h2>
         <?php foreach ($issues as $issue) { ?>
-          <h3 class="hrlr-headline-small"> No. <?php echo get_field('issue_number', $issue) ?> <?php echo get_field('season', $issue) ?>
-
-            <?php $issue_year =  get_field('start_year', $volume);
-                  if (get_field('issue_number', $issue) == 3) $issue_year++;
-                  echo $issue_year;
-                  ?>
-           </h3>
+					<h3 class="hrlr-headline-small"> No. <?php echo get_field('issue_number', $issue) ?> <span class="hrlr-post-volume-number"><?php echo get_field('season', $issue) ?>
+					<?php $issue_year =  get_field('start_year', $volume);
+								if (get_field('issue_number', $issue) == 3) $issue_year++;
+								echo $issue_year;
+								?></span>
+				 </h3>
           <?php
           $args = [
               'post_type' => 'hrlr',
