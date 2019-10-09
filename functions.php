@@ -125,6 +125,8 @@ function hrlr_scripts() {
 
 	wp_enqueue_script( 'hrlr-accordion', get_template_directory_uri() . '/js/accordion.js', array(), true );
 
+	wp_enqueue_script( 'hrlr-footnotes', get_template_directory_uri() . '/js/footnotes.js', array(), true );
+
 	wp_enqueue_script( 'hrlr-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'hrlr-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
