@@ -37,14 +37,14 @@ endif; ?>
 
 		if ( 'hrlr' === get_post_type() ) :
 			?>
-				<div class="hrlr-online-headline-small hrlr-issue-number"> Issue <?php echo get_field('volume')->name; ?>.<?php echo get_field('issue')->slug; ?></div>
+				<div class="hrlr-online-headline-small hrlr-issue-number"><a href="/hrlr"> Issue <?php echo get_field('volume')->name; ?>.<?php echo get_field('issue')->slug; ?></a></div>
 				<a class="button download-button downwards" href="<?php echo get_field('pdf'); ?>">Download the PDF</a>
 		<?php endif;
 
 		if ( 'hrlr_online' === get_post_type() ) :
 			?>
 				<div class="hrlr-online-headline-small hrlr-online-issue">
-					HRLR Online
+					<a href="/hrlr-online">HRLR Online</a>
           <span class="hrlr-online-headline-small hrlr-online-date"> <?php echo the_date("F j, Y"); ?></span>
 				</div>
 
