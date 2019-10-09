@@ -1,0 +1,12 @@
+.is-accordion {
+  cursor: pointer;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.is-accordion.is-closed {
+  & + div {
+    display: none;
+  }
+}

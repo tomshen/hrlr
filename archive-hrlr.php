@@ -28,7 +28,8 @@ get_header();
 
       foreach ($volumes as $volume) {
         ?>
-        <h2 class="hrlr-headline-large"> Vol. <?php echo $volume->slug ?> <span class="hrlr-post-year">(<?php echo get_field('start_year', $volume) ?>-<?php echo substr(strval(get_field('start_year', $volume)+1), -2) ?>)</span></h2>
+        <h2 class="hrlr-headline-large <?php if($volume != $volumes[0]) echo "is-accordion is-closed "; ?>"> Vol. <?php echo $volume->slug ?> <span class="hrlr-post-year">(<?php echo get_field('start_year', $volume) ?>-<?php echo substr(strval(get_field('start_year', $volume)+1), -2) ?>)</span></h2>
+				<div class="hrlr-volume-container submenu">
         <?php foreach ($issues as $issue) { ?>
 					<h3 class="hrlr-headline-small"> No. <?php echo get_field('issue_number', $issue) ?> <span class="hrlr-post-volume-number"><?php echo get_field('season', $issue) ?>
 					<?php $issue_year =  get_field('start_year', $volume);
@@ -60,14 +61,15 @@ get_header();
               ?>
               <div class="entry-content">
                   <h4 class="hrlr-headline-small"> <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></h4>
-                  <div class="secondary-text"> <?php echo get_field('author_name'); ?></div>
+                  <div class="secondary-text hrlr-post-author-name"> <?php echo get_field('author_name'); ?></div>
               </div>
               <?php
           }
 
           wp_reset_postdata();
-        }
-      } ?>
+        } ?>
+			</div>
+      <?php } ?>
 
 			<div class="back-issues-note hrlr-headline-small">
 				For inquiries into backdated issues, <a href="/about">reach out to us</a>. Archived issues are always available through LexisNexis and Westlaw.

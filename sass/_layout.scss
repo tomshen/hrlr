@@ -6,11 +6,11 @@
   padding-right: 20px;
 }
 
-.site-content, article, .post-recirc {
+.site-content, article, .post-recirc, .hrlr-volume-container {
   grid-column: $grid-mobile-span-full-width;
 }
 
-.site-main, .entry-header, .post-entry-content, .page .entry-content, .entry-footer, .post-recirc {
+.site-main, .entry-header, .post-entry-content, .page .entry-content, .entry-footer, .post-recirc, .hrlr-volume-container {
   display: grid;
   grid-template-columns: $grid-mobile;
   grid-column-gap: $grid-mobile-gap;
@@ -24,11 +24,11 @@
     padding-right: 0;
   }
 
-  .site-content, article, .entry-header, .post-entry-content, .page .entry-content, .entry-footer , .post-recirc{
+  .site-content, article, .entry-header, .post-entry-content, .page .entry-content, .entry-footer , .post-recirc,  .hrlr-volume-container{
     grid-column: $grid-desktop-span-full-width;
   }
 
-  .site-main, .entry-header, .post-entry-content, .page .entry-content,.entry-footer , .post-recirc{
+  .site-main, .entry-header, .post-entry-content, .page .entry-content,.entry-footer , .post-recirc,  .hrlr-volume-container{
     grid-template-columns: $grid-desktop;
     grid-column-gap: $grid-desktop-gap;
   }
