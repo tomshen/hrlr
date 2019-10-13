@@ -133,6 +133,14 @@
   }
 }
 
+.post-recirc {
+  margin-bottom: 3em;
+
+  .button {
+      grid-column: 1 / span 4;
+  }
+}
+
 
 @media screen and (min-width: $breakpoint-width-mobile) {
 
@@ -235,4 +243,11 @@
       grid-column: 12 / span 10;
     }
   }
+
+  .post-recirc {
+    .button {
+      grid-column: 12 / span 12;
+    }
+  }
+
 }

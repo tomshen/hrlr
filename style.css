@@ -1126,6 +1126,13 @@ h1, h2, h3, h4, h5, h6 {
   grid-column: 1/span 4;
 }
 
+.post-recirc {
+  margin-bottom: 3em;
+}
+.post-recirc .button {
+  grid-column: 1/span 4;
+}
+
 @media screen and (min-width: 1000px) {
   .publication-navigation {
     grid-column: 12/span 10;
@@ -1234,6 +1241,11 @@ h1, h2, h3, h4, h5, h6 {
   }
   .post-type-archive-hrlr_online .post-info, .hrlr-online-post-recirc .post-info {
     grid-column: 12/span 10;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .post-recirc .button {
+    grid-column: 12/span 12;
   }
 }
 .page .entry-title {

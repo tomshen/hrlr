@@ -96,6 +96,7 @@ endif; ?>
           $args = [
               'post_type' => 'hrlr_online',
               'posts_per_page' => '3',
+              'order' => 'DESC',
           ];
           $loop = new WP_Query($args);
 					if($loop->have_posts()) { ?>
@@ -119,6 +120,7 @@ endif; ?>
           }
           wp_reset_postdata();
       ?>
+      <a class="secondary-text button forwards" href="/hrlr-online/">See all</a>
 
   </div>
 <?php endif; ?>
@@ -132,6 +134,7 @@ endif; ?>
         $args = [
             'post_type' => 'hrlr',
             'posts_per_page' => '3',
+            'order' => 'desc',
         ];
         $loop = new WP_Query($args);
         while ($loop->have_posts()) {
@@ -146,5 +149,7 @@ endif; ?>
 
         wp_reset_postdata();
         ?>
+
+      	<a class="secondary-text button forwards" href="/hrlr/">See all</a>
   </div>
 <?php endif; ?>
