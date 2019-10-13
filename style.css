@@ -1082,6 +1082,7 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 1px solid #03001D;
   position: relative;
   padding: 15px 25px 10px 25px;
+  z-index: -1;
 }
 .post-type-archive-hrlr .hrlr-post-volume-number, .hrlr-post-recirc .hrlr-post-volume-number {
   position: absolute;

@@ -74,6 +74,8 @@
       border-top: 1px solid $color-text;
       position: relative;
       padding: 15px 25px 10px 25px;
+      // prevent the issue number from covering the first item in the volume
+      z-index: -1;
     }
 
     .hrlr-post-volume-number {
