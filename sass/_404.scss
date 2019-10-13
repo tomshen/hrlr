@@ -1,0 +1,22 @@
+.error-404 {
+  grid-column: 1 / span 4;
+  h1 {
+      @include hrlr-headline-large;
+      margin-top: 3em;
+      margin-bottom: 1em;
+  }
+
+  .button {
+    margin-top: 2em;
+    background-color: $color-background-hrlr;
+
+  }
+}
+@media screen and (min-width: $breakpoint-width-mobile) {
+  .error-404 {
+    grid-column: 2 / span 22;
+  }
+  .button {
+    max-width: 500px;
+  }
+}

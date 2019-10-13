@@ -1544,5 +1544,44 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
   }
 }
+.error-404 {
+  grid-column: 1/span 4;
+}
+.error-404 h1 {
+  font-family: "Burgess", "Garamond", "Times New Roman", "Times", "serif";
+  font-size: 54px;
+  letter-spacing: -0.25px;
+  line-height: 56px;
+  font-weight: 400;
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+.error-404 h1 a {
+  text-decoration: none;
+}
+.error-404 h1 a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 1000px) {
+  .error-404 h1 {
+    font-size: 30px;
+    letter-spacing: -0.15px;
+    line-height: 33px;
+  }
+}
+.error-404 .button {
+  margin-top: 2em;
+  background-color: #F6F7F7;
+}
+
+@media screen and (min-width: 1000px) {
+  .error-404 {
+    grid-column: 2/span 22;
+  }
+
+  .button {
+    max-width: 500px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
