@@ -110,6 +110,9 @@
       border-radius: $border-radius;
       padding: 30px 30px 30px 60px;
 
+      //some hyperlinks are too long to fit the citations block and cause overflow. This prevents that.
+      overflow: hidden; 
+
       &::before {
         content: "Citations";
         margin-left: -30px;

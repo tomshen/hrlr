@@ -902,6 +902,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: white;
   border-radius: 10px;
   padding: 30px 30px 30px 60px;
+  overflow: hidden;
 }
 .single-hrlr .post-entry-content ol:last-of-type a, .single-hrlr_online .post-entry-content ol:last-of-type a {
   text-decoration: none;
