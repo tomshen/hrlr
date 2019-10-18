@@ -14,10 +14,7 @@ get_header();
 		<main id="main" class="site-main">
 			<section class="error-404 not-found">
 				<h1 class="page-title"><?php esc_html_e( 'The requested resource cannot be found.', 'hrlr' ); ?></h1>
-
 				<a class="secondary-text button forwards" href="/">Return home</a>
-
-				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
 		</main><!-- #main -->
