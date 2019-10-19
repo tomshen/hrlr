@@ -38,21 +38,15 @@ Install the following plugins.
 
 The version number after the plugin is the version number the site was developed with.
 
-### Add post types and taxonomies
-
-Copy over the post types and taxonomies using CPT UI and ACF. This will require using an export from a recent install of the site.
-
 ### Content
 
-Download the latest archive file with the current posts.
+Save an archive of the current site before overwriting it with new information.
 
-Delete the current posts and taxonomies.
+Disable any active plugins besides the ones we're currently using.
 
-Use the Wordpress importer to import the posts.
+Move all of the current pages and posts to the trash.
 
-This will require using an export from a recent install of the site.
-
-Note: the pdf versions of the articles will need to be uploaded separately and relinked.
+Use the Wordpress importer to import the new content. This will require using an export from a recent install of the site. Note: the pdf versions of the articles will need to be uploaded separately and relinked.
 
 ### Activate the theme
 
