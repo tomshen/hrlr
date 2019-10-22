@@ -5,9 +5,9 @@ This is a theme for the website of the Columbia Human Rights Law Review (HRLR).
 
 This theme is designed to work with Wordpress version 5.2.3.
 
-Development
+Developing Locally
 -----------
-In order to develop for this theme, you must have Wordpress and sass installed.
+In order to develop for this theme, you must have Wordpress and SASS installed.
 
 We use [Local by Flywheel](https://localbyflywheel.com) for local Wordpress development.
 
@@ -19,10 +19,12 @@ In order to make CSS changes, the sass files must be compiled.
 2. In a terminal: `brew install sass/sass/sass`
 3. To compile: `sass --watch -I sass sass/style.scss style.css`
 
+Note that Homebrew and SASS only need to be installed to recompile the CSS. To deploy the theme, SASS and Homebrew are not required.
+
 The HRLR theme requires specialized content, plugins, and taxonomies in order to work properly. See the next section for those instructions.
 
 
-Setting up Wordpress
+Setting up Wordpress and Deploying the Theme
 --------------------
 
 In order to support the theme, the plugins, taxonomies, and content must all be in place.
