@@ -14,6 +14,7 @@ $main-navigation-height: 100vh;
         margin: 10px;
         text-align: center;
         width: 100%;
+        outline: 0;
 
         &:before {
           content: '.';
@@ -36,7 +37,7 @@ $main-navigation-height: 100vh;
         display: none;
         flex-direction: column;
         justify-content: space-between;
-        padding: 10px;
+        padding: 18px 10px 12px;
         min-height: calc(100vh - 20px - 65px);
 
         > :last-child {
@@ -55,15 +56,18 @@ $main-navigation-height: 100vh;
             color: $color-text;
             font-size: 50%;
             top: -0.8em;
+            margin-left: 0.4em;
         }
 
         .hrlr-menu-item {
             display: block;
+            font-size: 30px;
+            line-height: 35px;
 
             > a {
                 display: block;
-                padding: 7px;
-                padding-left: calc(7px + 1em);
+                padding: 6px 10px 12px;
+                padding-left: calc(10px + 1em);
                 text-indent: -1em;
             }
 
@@ -73,21 +77,40 @@ $main-navigation-height: 100vh;
             }
         }
 
+        &.about-menu {
+          .hrlr-menu-item {
+
+            & > a {
+              padding: 2px 0;
+              padding-left: 10px;
+              text-indent: 0;
+            }
+
+            &:hover {
+              background-color: transparent;
+              border-radius: 0;
+            }
+          }
+        }
+
         .hrlr-menu-item-secondary {
             @include secondary-text;
             display: block;
-            padding: 7px;
-
-            > a:hover {
-                background-color: $color-nav-highlight;
-            }
+            padding: 15px 10px;
         }
 
         .hrlr-menu-footnote {
             color: $color-text;
             font-size: 12px;
-            margin-top: 10px;
             line-height: 16px;
+            letter-spacing: 0.1px;
+            margin-top: 20px;
+            margin-left: 10px;
+            list-style: none;
+
+            & + .hrlr-menu-footnote {
+              margin-top: 0;
+            }
         }
 
         & + .hrlr-menu {
@@ -150,6 +173,7 @@ $main-navigation-height: 100vh;
             @include secondary-text;
             display: none;
             margin-top: 20px;
+            line-height: 1.4;
         }
 
         // TODO: do this with CSS variables if we don't need to support IE

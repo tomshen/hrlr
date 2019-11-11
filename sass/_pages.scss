@@ -1,4 +1,5 @@
 .page {
+
   .entry-title {
     grid-column: 1 / span 4;
   }
@@ -26,17 +27,19 @@
 
 @media screen and (min-width: $breakpoint-width-mobile) {
   .page {
-    .entry-title {
+    .site-content {
       grid-column: 12 / span 11;
+    }
+    .entry-title {
+      grid-column: 1 / span 24;
     }
 
     .entry-content > * {
-      grid-column: 12 / span 11;
+      grid-column: 1 / span 24;
     }
 
-
-      h1:first-child{
-        margin-top: -.8em;
-      }
+    h1:first-child{
+      margin-top: 30px;
+    }
   }
 }

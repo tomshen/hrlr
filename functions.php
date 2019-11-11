@@ -163,3 +163,13 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Customize archive exceprt ellipsis
+ */
+
+ function new_excerpt_more ($more) {
+	 return '...';
+ }
+
+ add_filter('excerpt_more', 'new_excerpt_more');

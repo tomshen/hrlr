@@ -36,6 +36,8 @@
 
     h3 {
       grid-column: 1 / span 4;
+      font-size: 30px;
+      line-height: 33px;
       border-bottom: 1px solid $color-text;
       position: relative;
       padding: 15px 25px 10px 25px;
@@ -49,7 +51,7 @@
       content: ".";
       display: inline-block;
       width: 17px;
-      height: 1em;
+      height: 0.85em;
       background-color: $color-text;
     }
 
@@ -114,7 +116,7 @@
         content: ".";
         display: inline-block;
         width: 27px;
-        height: 1em;
+        height: 0.85em;
         background-color: $color-text;
       }
 

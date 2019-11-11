@@ -94,7 +94,7 @@
 		<div class="scroll-container">
 			<button class="menu-toggle" aria-controls="main-navigation-menu" aria-expanded="false"></button>
 			<div id="main-navigation-menu">
-				<ul class="hrlr-menu">
+				<ul class="hrlr-menu publications-menu">
 					<?php
 						$page_titles = (object) [
 							"Human&nbsp;Rights Law&nbsp;Review" => '/hrlr',
@@ -107,7 +107,7 @@
 					?>
 					<li class="hrlr-menu-item" >
 						<a href="<?php echo $url; ?>">
-							<?php echo $title; ?>&nbsp;<sup><?php echo ($index); ?></sup>
+							<?php echo $title; ?><sup><?php echo ($index); ?></sup>
 							<?php $index++; ?>
 						</a>
 					</li>
@@ -127,7 +127,7 @@
 					</li>
 					<?php endforeach; ?>
 				</ul>
-				<ul class="hrlr-menu">
+				<ul class="hrlr-menu about-menu">
 					<?php
 
 						$page_titles = (object) [
@@ -163,7 +163,7 @@
 			<?php if (is_post_type_archive( ["hrlr", "hrlr_online"] )): ?>
 				<div class="publication-navigation">
 					<div class="publication-navigation-item hrlr-headline-large <?php if (is_post_type_archive( ["hrlr"] )) { echo "is-selected"; }?>">
-						<a href="/hrlr/">H.&nbsp;R.&nbsp;L.&nbsp;R.</a>
+						<a href="/hrlr/">H.R.L.R.</a>
 					</div>
 					<div class="publication-navigation-item hrlr-online-headline-large <?php if (is_post_type_archive( ["hrlr_online"] )) { echo "is-selected"; }?>">
 						<a href="/hrlr-online/">HRLR&nbsp;Online</a>

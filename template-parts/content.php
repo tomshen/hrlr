@@ -129,7 +129,7 @@ endif; ?>
 <?php if ( 'hrlr' === get_post_type() and get_field("abstract_only") ) : ?>
   <div class="post-recirc hrlr-post-recirc">
 
-      <h2 class="hrlr-headline-large"> More H. R. L. R.</h2>
+      <h2 class="hrlr-headline-large"> More H.R.L.R.</h2>
         <?php
         $args = [
             'post_type' => 'hrlr',

@@ -19,8 +19,8 @@ $hrlr-online-font: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
   @include subtle-link;
   font-family: $hrlr-font;
   font-size: 54px;
-  letter-spacing: -0.25px;
-  line-height: 56px;
+  letter-spacing: -0.5px;
+  line-height: 54px;
   font-weight: 400;
 
   @media (max-width: $breakpoint-width-mobile) {
@@ -49,7 +49,7 @@ $hrlr-online-font: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
   @include subtle-link;
   font-family: $hrlr-font;
   font-size: 30px;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.3px;
   line-height: 33px;
   font-weight: 400;
 
@@ -87,7 +87,7 @@ $hrlr-online-font: "Unica", "Helvetica Neue", "Helvetica", "sans-serif";
   @include subtle-link;
   font-family: $hrlr-online-font;
   font-size: 16px;
-  letter-spacing: -0.04;
+  letter-spacing: 0.1px;
   line-height: 24px;
   font-weight: 400;
 }

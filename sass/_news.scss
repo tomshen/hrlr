@@ -32,25 +32,31 @@
 }
 
 @media screen and (min-width: $breakpoint-width-mobile) {
-  .single-news {
+  .single-news, .post-type-archive-news {
+    .site-content {
+      grid-column: 12 / span 11;
+    }
     .entry-title {
-      grid-column: 11 / span 12;
+      grid-column: 13 / span 11;
     }
 
     .entry-content > *, .news-date {
-      grid-column: 11 / span 12;
+      grid-column: 13  / span 11;
     }
   }
 
   .post-type-archive-news {
     .site-content {
-      grid-column: 11 / span 12;
-      margin-top: -1em;
+      grid-column: 13 / span 11;
     }
   }
 
   .news-navigation {
-    grid-column: 11 / span 4;
+    grid-column: 13 / span 4;
     margin-top: 1.4em;
+  }
+
+  h1:first-child{
+    margin-top: 30px;
   }
 }
