@@ -15,8 +15,10 @@
 @media screen and (min-width: $breakpoint-width-mobile) {
   .error-404 {
     grid-column: 2 / span 22;
+
+    .button {
+      max-width: 500px;
+    }
   }
-  .button {
-    max-width: 500px;
-  }
+
 }

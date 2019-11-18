@@ -99,7 +99,7 @@
 						$page_titles = (object) [
 							"Human&nbsp;Rights Law&nbsp;Review" => '/hrlr',
 							"HRLR Online" => "/hrlr-online",
-							"A&nbspJailhouse Lawyers'&nbspManual" => "http://jlm.law.columbia.edu",
+							"A  Jailhouse Lawyers&rsquo; Manual" => "http://jlm.law.columbia.edu",
 							"Trump&nbspHuman Rights&nbspTracker" => "https://trumphumanrightstracker.law.columbia.edu",
 						];
 						$index = 1;
@@ -150,6 +150,7 @@
 			</div>
 		</div>
 	</nav><!-- #site-navigation -->
+	<div class="nav-bg-overlay"></div>
 
 	<div class="body">
 		<header id="masthead" class="site-header">

@@ -33,6 +33,7 @@
       display: block;
       border-top: 1px solid $color-text;
       grid-column: 1 / span 4;
+      padding-top: 10px;
     }
 
     .seccondary-download-button {
@@ -113,13 +114,16 @@
       background-color: $color-background;
       border-radius: $border-radius;
       padding: 30px 30px 30px 60px;
+      margin-bottom: 60px;
 
       //some hyperlinks are too long to fit the citations block and cause overflow. This prevents that.
       overflow: hidden;
 
       &::before {
         content: "Citations";
+        display: block;
         margin-left: -30px;
+        margin-bottom: 20px;
         @include hrlr-online-headline-small;
       }
     }
@@ -172,10 +176,9 @@
     .post-entry-content {
       .author-bio {
         grid-column: 17 / span 7;
+        grid-row: 2 / span 1;
         height: 0px;
         margin: 0px;
-        position: relative;
-        top: 120px;
       }
 
       > * {

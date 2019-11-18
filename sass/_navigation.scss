@@ -1,4 +1,4 @@
-$main-navigation-height: 100vh;
+$main-navigation-height: 100%;
 
 .main-navigation {
     z-index: 10; // to be above footnotes
@@ -6,15 +6,24 @@ $main-navigation-height: 100vh;
     top: 0;
     right: 0;
 
+    .scroll-container {
+      overflow-y: scroll;
+      height: 100vh;
+    }
+
     .menu-toggle {
         background: none;
         border: none;
         cursor: pointer;
         font-size: 36px;
-        margin: 10px;
+        margin: 15px;
         text-align: center;
-        width: 100%;
+        // width: 100%;
         outline: 0;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        padding: 0;
+
 
         &:before {
           content: '.';
@@ -38,7 +47,7 @@ $main-navigation-height: 100vh;
         flex-direction: column;
         justify-content: space-between;
         padding: 18px 10px 12px;
-        min-height: calc(100vh - 20px - 65px);
+        min-height: calc(100vh - 40px - 65px);
 
         > :last-child {
             font-size: 24px;
@@ -70,12 +79,39 @@ $main-navigation-height: 100vh;
                 padding-left: calc(10px + 1em);
                 text-indent: -1em;
             }
-
-            &:hover {
-                background-color: $color-nav-highlight;
-                border-radius: $border-radius;
-            }
         }
+
+        &.publications-menu {
+
+          .hrlr-menu-item {
+              &:hover {
+                  background-color: $color-nav-highlight;
+                  border-radius: $border-radius;
+
+                  a {
+                    text-decoration: none;
+                  }
+              }
+          }
+          .hrlr-menu-item:nth-of-type(1):hover {
+                background-color: $color-background-hrlr;
+          }
+
+          .hrlr-menu-item:nth-of-type(2):hover {
+                background-color: $color-background-hrlr-online;
+          }
+
+          .hrlr-menu-item:nth-of-type(3):hover {
+                background-color: #226;
+                a, sup { color: #fff; }
+          }
+
+          .hrlr-menu-item:nth-of-type(4):hover {
+                background-color: #000;
+                a, sup { color: #fff; }
+          }
+        }
+
 
         &.about-menu {
           .hrlr-menu-item {
@@ -120,13 +156,15 @@ $main-navigation-height: 100vh;
 
     &.toggled {
         background: white;
-        height: 100vh;
         max-width: 90%;
-        overflow-y: auto;
+        overflow-y: scroll;
         width: $main-navigation-width;
+        // min-height: $main-navigation-height;
+        // min-height: -webkit-fill-available;
+        height: $main-navigation-height;
 
         .menu-toggle {
-            width: 42px;
+            // width: 42px;
 
             &:before {
                 content: '✕';
@@ -142,6 +180,19 @@ $main-navigation-height: 100vh;
             display: flex;
         }
     }
+}
+
+.nav-bg-overlay {
+  display: none;
+  background: transparent;
+  z-index: 9;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-navigation.toggled + .nav-bg-overlay {
+  display: block;
 }
 
 @media screen and (min-width: $breakpoint-width-mobile) {
@@ -161,6 +212,18 @@ $main-navigation-height: 100vh;
           min-height: calc(100vh - 20px);
           display: flex;
         }
+    }
+
+    .main-navigation {
+      .menu-toggle {
+        margin: 30px 4.2vw 0 0;
+      }
+
+      &.toggled {
+        .menu-toggle {
+          margin: 30px 15px 0;
+        }
+      }
     }
 
 

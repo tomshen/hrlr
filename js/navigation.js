@@ -5,7 +5,7 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-	var container, button, menu, links, i, len;
+	var container, button, menu, links, i, len, bg;
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
@@ -41,6 +41,14 @@
 			menu.setAttribute( 'aria-expanded', 'true' );
 		}
 	};
+
+	bg = document.querySelectorAll('.nav-bg-overlay')[0];
+
+	bg.onclick = function() {
+		container.className = container.className.replace( ' toggled', '' );
+	}
+
+
 
 	// Get all the link elements within the menu.
 	links    = menu.getElementsByTagName( 'a' );

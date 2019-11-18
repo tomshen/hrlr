@@ -134,7 +134,7 @@
     border-top: 1px solid $color-text;
     grid-column: 1 / span 4;
     margin-bottom: 3em;
-    padding-top: 1em;
+    padding-top: 10px;
   }
 
   h2 + .entry-content {
@@ -143,8 +143,12 @@
   }
 
   h2 {
-    padding-bottom: 20px;
-    margin: 50px 0 20px 0;
+    padding-bottom: 15px;
+    margin: 50px 0 10px;
+
+    &:first-of-type {
+      margin-top: 3em;
+    }
   }
 
 

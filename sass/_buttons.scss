@@ -39,7 +39,7 @@
   @include button;
 
   &:hover {
-    opacity: .7;
+    filter: invert(100%);
   }
 
   &.on-white {

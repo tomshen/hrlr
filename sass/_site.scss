@@ -1,5 +1,5 @@
-.site-title {
-    max-width: 200px;
+.site-title img {
+    max-width: 220px;
 }
 
 #masthead {
@@ -8,7 +8,7 @@
 }
 
 @media screen and (min-width: $breakpoint-width-mobile) {
-  .site-title {
+  .site-title img {
       max-width: 300px;
   }
 
