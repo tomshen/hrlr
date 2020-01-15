@@ -1,0 +1,17 @@
+#cookie-notice{
+  .cookie-notice-container{
+    padding: 20px;
+    width: auto;
+    text-align: left;
+    @include text
+  }
+
+  #cn-notice-text {
+  }
+
+  .cn-button {
+    display: inline-block;
+    padding: 1px 5px;
+    margin: 0;
+  }
+}

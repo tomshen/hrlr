@@ -1701,5 +1701,25 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 500px;
   }
 }
+#cookie-notice .cookie-notice-container {
+  padding: 20px;
+  width: auto;
+  text-align: left;
+  font-family: "Times New Roman", "Times", "serif";
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+#cookie-notice .cookie-notice-container a {
+  text-decoration: none;
+}
+#cookie-notice .cookie-notice-container a:hover {
+  text-decoration: underline;
+}
+#cookie-notice .cn-button {
+  display: inline-block;
+  padding: 1px 5px;
+  margin: 0;
+}
 
 /*# sourceMappingURL=style.css.map */
