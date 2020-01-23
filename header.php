@@ -94,59 +94,37 @@
 		<div class="scroll-container">
 			<button class="menu-toggle" aria-controls="main-navigation-menu" aria-expanded="false"></button>
 			<div id="main-navigation-menu">
-				<ul class="hrlr-menu publications-menu">
-					<?php
-						$page_titles = (object) [
-							"Human&nbsp;Rights Law&nbsp;Review" => '/hrlr',
-							"HRLR Online" => "/hrlr-online",
-							"A  Jailhouse Lawyers&rsquo; Manual" => "http://jlm.law.columbia.edu",
-							"Trump&nbspHuman Rights&nbspTracker" => "https://trumphumanrightstracker.law.columbia.edu",
-						];
-						$index = 1;
-						foreach ($page_titles as $title=>$url):
-					?>
-					<li class="hrlr-menu-item" >
-						<a href="<?php echo $url; ?>">
-							<?php echo $title; ?><sup><?php echo ($index); ?></sup>
-							<?php $index++; ?>
-						</a>
-					</li>
-					<?php endforeach; ?>
-					<?php
-						$footnotes = array(
-							"The flagship journal, each volume published in three issues every academic year.",
-							"An online forum for rigorous discussion and analysis of current issues in human rights law.",
-							"A handbook of legal rights and procedures designed for use by people in prison.",
-							"A tool to track the Trump administration’s actions and their impact on human rights.",
-						);
-						foreach ($footnotes as $index=>$footnote):
-					?>
-					<li class="hrlr-menu-footnote hrlr-menu-footnote-<?php echo ($index + 1); ?>">
-						<sup><?php echo ($index + 1); ?></sup>
-						<?php echo $footnote; ?>
-					</li>
-					<?php endforeach; ?>
-				</ul>
-				<ul class="hrlr-menu about-menu">
-					<?php
+				<?php
+					// $page_titles = (object) [
+					// 	"Human&nbsp;Rights Law&nbsp;Review" => '/hrlr',
+					// 	"HRLR Online" => "/hrlr-online",
+					// 	"A  Jailhouse Lawyers&rsquo; Manual" => "http://jlm.law.columbia.edu",
+					// 	"Trump&nbspHuman Rights&nbspTracker" => "https://trumphumanrightstracker.law.columbia.edu",
+					// ];
+					// $index = 1;
+					// foreach ($page_titles as $title=>$url):
 
-						$page_titles = (object) [
-							"About" => '/about',
-							"Submissions" => "/submissions",
-							"News" => "/news",
-						];
-						foreach ($page_titles as $title=>$url):
-					?>
-					<li class="hrlr-menu-item" >
-						<a href="<?php echo $url; ?>">
-							<?php echo $title; ?>
-						</a>
-					</li>
-					<?php endforeach; ?>
-					<li class="hrlr-menu-item-secondary" >
-						<a href="https://twitter.com/hrlronline">Twitter</a>, <a href="mailto:jrnhum@law.columbia.edu ">Email</a>
-					</li>
-				</ul>
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_class' => 'hrlr-menu publications-menu',
+						'container' => false
+						)
+					);
+				wp_nav_menu( array(
+					'theme_location' => 'menu-2',
+					'menu_class' => 'hrlr-menu about-menu',
+					'container' => false
+					)
+				);
+				?>
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu-3',
+					'menu_class' => 'hrlr-menu contact-menu',
+					'container' => false
+					)
+				);
+				?>
 			</div>
 		</div>
 	</nav><!-- #site-navigation -->

@@ -111,4 +111,24 @@
 			}
 		}
 	}( container ) );
+
+  // change background color and show footnotes on publication link hover
+
+  var publications = document.querySelectorAll('.publications-menu .menu-item div');
+  var footnotes = document.querySelectorAll('.footnotes .hrlr-menu-footnote')
+
+  publications.forEach(function(link, index) {
+    var bgColor = link.getAttribute('data-bg-color');
+    var textColor = link.getAttribute('data-text-color');
+
+    link.onmouseover = function() {
+      footnotes[index].classList.add("visible");
+      link.setAttribute('style', 'background-color:' + bgColor + '; color:' + textColor )
+    }
+
+    link.onmouseout = function() {
+      footnotes[index].classList.remove("visible");
+      link.setAttribute('style', '')
+    }
+  })
 } )();

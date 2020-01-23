@@ -46,6 +46,7 @@ if ( ! function_exists( 'hrlr_setup' ) ) :
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'hrlr' ),
 			'menu-2' => esc_html__( 'Secondary', 'hrlr' ),
+			'menu-3' => esc_html__( 'Social', 'hrlr' ),
 		) );
 
 		/*
@@ -165,7 +166,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /**
- * Customize archive exceprt ellipsis
+ * Customize archive excerpt ellipsis
  */
 
  function new_excerpt_more ($more) {
@@ -173,3 +174,76 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  }
 
  add_filter('excerpt_more', 'new_excerpt_more');
+
+
+ /**
+  * Display main menu additional fields
+  */
+
+function my_wp_nav_menu_objects( $items, $args ) {
+
+	// modify primary nav only
+
+	if( $args->theme_location == 'menu-1' ) {
+
+		foreach( $items as $key=>$item ) {
+
+			// vars
+			$bg_color = get_field('bg_color', $item);
+			$text_color = get_field('text_color', $item);
+			$footnote = get_field('footnote', $item);
+
+			if( $bg_color ) {
+				$item_before = '<div data-bg-color="'. $bg_color .'" data-text-color="' . $text_color . '">';
+				$item_after = '<sup>' . $key . '</sup></div>';
+				$item->title = $item_before . $item->title . $item_after;
+			}
+		}
+	}
+
+	// return
+	return $items;
+
+}
+
+/**
+ * Display main menu footnotes
+ */
+
+function my_wp_nav_menu_items( $items, $args ) {
+
+	// get menu
+	$menu = wp_get_nav_menu_items($args->menu);
+
+	// modify primary only
+	if( $args->theme_location == 'menu-1' ) {
+
+		// closes main menu items list
+		$footnotes = '</ul>';
+
+		// begins footnote list
+		$footnotes .= '<ul class="footnotes">';
+
+		foreach( $menu as $key=>$item ) {
+			$footnote = get_field('footnote', $item);
+
+			$footnotes .= '<li class="hrlr-menu-footnote">';
+				$footnotes .= '<sup>';
+				$footnotes .= $key + 1;
+				$footnotes .= '</sup>';
+			$footnotes .= $footnote;
+			$footnotes .= '</li>';
+		}
+
+		// Wordpress adds final </ul>
+
+		$items = $items . $footnotes;
+
+	}
+
+	// return
+	return $items;
+}
+
+add_filter('wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2);
+add_filter('wp_nav_menu_items', 'my_wp_nav_menu_items', 10, 2);

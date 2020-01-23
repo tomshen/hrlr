@@ -47,7 +47,8 @@ $main-navigation-height: 100%;
         flex-direction: column;
         justify-content: space-between;
         padding: 18px 10px 12px;
-        min-height: calc(100vh - 40px - 65px);
+        box-sizing: border-box;
+        min-height: calc(100vh - 70px);
 
         > :last-child {
             font-size: 24px;
@@ -62,7 +63,7 @@ $main-navigation-height: 100%;
         padding: 0;
 
         sup {
-            color: $color-text;
+            // color: $color-text;
             font-size: 50%;
             top: -0.8em;
             margin-left: 0.4em;
@@ -82,77 +83,75 @@ $main-navigation-height: 100%;
         }
 
         &.publications-menu {
+          // flex-grow: 1;
 
-          .hrlr-menu-item {
+          .menu-item {
+              div {
+                border-radius: $border-radius;
+                padding: 8px 10px;
+                padding-left: calc(10px + 1em);
+                text-indent: -1em;
+              }
               &:hover {
-                  background-color: $color-nav-highlight;
-                  border-radius: $border-radius;
-
                   a {
                     text-decoration: none;
                   }
               }
           }
-          .hrlr-menu-item:nth-of-type(1):hover {
-                background-color: $color-background-hrlr;
-          }
-
-          .hrlr-menu-item:nth-of-type(2):hover {
-                background-color: $color-background-hrlr-online;
-          }
-
-          .hrlr-menu-item:nth-of-type(3):hover {
-                background-color: #226;
-                a, sup { color: #fff; }
-          }
-
-          .hrlr-menu-item:nth-of-type(4):hover {
-                background-color: #000;
-                a, sup { color: #fff; }
-          }
         }
 
 
         &.about-menu {
-          .hrlr-menu-item {
-
-            & > a {
-              padding: 2px 0;
+          .menu-item {
+              padding: 3px 0;
               padding-left: 10px;
               text-indent: 0;
-            }
-
-            &:hover {
-              background-color: transparent;
-              border-radius: 0;
-            }
           }
         }
 
-        .hrlr-menu-item-secondary {
-            @include secondary-text;
-            display: block;
-            padding: 15px 10px;
-        }
+        &.contact-menu {
+          display: block;
+          padding-left: 10px;
 
-        .hrlr-menu-footnote {
-            color: $color-text;
-            font-size: 12px;
-            line-height: 16px;
-            letter-spacing: 0.1px;
-            margin-top: 20px;
-            margin-left: 10px;
-            list-style: none;
+          .menu-item {
+              @include secondary-text;
+              display: inline;
 
-            & + .hrlr-menu-footnote {
-              margin-top: 0;
-            }
+              &:not(:last-of-type):after {
+                content: ", ";
+              }
+          }
         }
 
         & + .hrlr-menu {
             margin-top: 20px;
         }
     }
+
+    .footnotes {
+      padding: 0 10px;
+      order: 5;
+
+      .hrlr-menu-footnote {
+          @include secondary-text;
+          padding: 0;
+          margin-left: 0;
+          // display: none;
+          line-height: 1.4;
+          list-style: none;
+          color: $color-text;
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 0.1px;
+          list-style: none;
+
+          sup {
+            display: inline-block;
+            margin-right: 5px;
+          }
+      }
+    }
+
 
     &.toggled {
         background: white;
@@ -195,6 +194,15 @@ $main-navigation-height: 100%;
   display: block;
 }
 
+
+@media screen and (max-width: $breakpoint-width-mobile - 1) {
+  .main-navigation {
+    .publications-menu {
+      flex-grow: 1;
+    }
+  }
+}
+
 @media screen and (min-width: $breakpoint-width-mobile) {
     .home .main-navigation,
     .home .main-navigation.toggled {
@@ -224,33 +232,26 @@ $main-navigation-height: 100%;
           margin: 30px 15px 0;
         }
       }
-    }
 
+      .publications-menu {
+        // flex: auto;
+      }
 
-    #main-navigation-menu .hrlr-menu {
-        display: flex;
-        flex-direction: column;
-        font-size: 28px;
+      .footnotes {
+        order: inherit;
+        flex-grow: 1;
 
         .hrlr-menu-footnote {
-            @include secondary-text;
-            display: none;
-            margin-top: 20px;
-            line-height: 1.4;
-        }
+          font-size: 16px;
+          letter-spacing: 0.1px;
+          line-height: 22px;
+          font-weight: 400;
+          display: none;
 
-        // TODO: do this with CSS variables if we don't need to support IE
-        .hrlr-menu-item:nth-of-type(1):hover ~ .hrlr-menu-footnote-1 {
+          &.visible {
             display: block;
+          }
         }
-        .hrlr-menu-item:nth-of-type(2):hover ~ .hrlr-menu-footnote-2 {
-            display: block;
-        }
-        .hrlr-menu-item:nth-of-type(3):hover ~ .hrlr-menu-footnote-3 {
-            display: block;
-        }
-        .hrlr-menu-item:nth-of-type(4):hover ~ .hrlr-menu-footnote-4 {
-            display: block;
-        }
+      }
     }
 }
