@@ -30,42 +30,45 @@ get_header();
         ?>
         <h2 class="hrlr-headline-large <?php if($volume != $volumes[0]) echo "is-accordion is-closed "; ?>"> Vol. <?php echo $volume->slug ?> <span class="hrlr-post-year">(<?php echo get_field('start_year', $volume) ?>-<?php echo substr(strval(get_field('start_year', $volume)+1), -2) ?>)</span></h2>
 				<div class="hrlr-volume-container submenu">
-        <?php foreach ($issues as $issue) { ?>
-					<h3 class="hrlr-headline-small"> No. <?php echo get_field('issue_number', $issue) ?> <span class="hrlr-post-volume-number"><?php echo get_field('season', $issue) ?>
-					<?php $issue_year =  get_field('start_year', $volume);
-								if (get_field('issue_number', $issue) == 3) $issue_year++;
-								echo $issue_year;
-								?></span>
-				 </h3>
-          <?php
-          $args = [
-              'post_type' => 'hrlr',
-              'nopaging' => true,
-              'tax_query' => array(
-                'relation' => 'AND',
-                array(
-                    'taxonomy' => 'volumes',
-                    'field'    => 'slug',
-                    'terms'    => $volume->slug,
-                ),
-                array(
-                    'taxonomy' => 'issue',
-                    'field'    => 'slug',
-                    'terms'    => $issue->slug,
-                ),
-              ),
-          ];
-          $loop = new WP_Query($args);
-          while ($loop->have_posts()) {
-              $loop->the_post();
-              ?>
-              <div class="entry-content">
-                  <h4 class="hrlr-headline-small"> <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></h4>
-                  <div class="secondary-text hrlr-post-author-name"> <?php echo get_field('author_name'); ?></div>
-              </div>
-              <?php
-          }
+	      <?php foreach ($issues as $issue) { ?>
+					 <?php
+					 $args = [
+							 'post_type' => 'hrlr',
+							 'nopaging' => true,
+							 'tax_query' => array(
+								 'relation' => 'AND',
+								 array(
+										 'taxonomy' => 'volumes',
+										 'field'    => 'slug',
+										 'terms'    => $volume->slug,
+								 ),
+								 array(
+										 'taxonomy' => 'issue',
+										 'field'    => 'slug',
+										 'terms'    => $issue->slug,
+								 ),
+							 ),
+					 ];
+					 $loop = new WP_Query($args);
 
+					 if ($loop->have_posts()) {  ?>
+							<h3 class="hrlr-headline-small"> No. <?php echo get_field('issue_number', $issue) ?> <span class="hrlr-post-volume-number"><?php echo get_field('season', $issue) ?>
+							<?php $issue_year =  get_field('start_year', $volume);
+										if (get_field('issue_number', $issue) == 3) $issue_year++;
+										echo $issue_year;
+										?></span>
+						 </h3>
+
+							<?php
+		          while ($loop->have_posts()) {
+		              $loop->the_post();
+		              ?>
+		              <div class="entry-content">
+		                  <h4 class="hrlr-headline-small"> <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a></h4>
+		                  <div class="secondary-text hrlr-post-author-name"> <?php echo get_field('author_name'); ?></div>
+		              </div>
+		     <?php }
+					}
           wp_reset_postdata();
         } ?>
 			</div>
